@@ -1,17 +1,15 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
-  plugins: [react(), tailwindcss()],
-  server: {
-    watch: {
-      ignored: [
-        '**/.visual-qa-profile*/**',
-        '**/.visual-qa-cdp-profile*/**',
-        '**/.chrome-profile*/**',
-        '**/.playwright*/**',
-      ],
+    base: "/codexJapaneseLearnWebApp/",
+
+    plugins: [react(), tailwindcss()],
+
+    server: {
+        watch: {
+            ignored: ["**/.visual-qa-profile*/**", "**/.visual-qa-cdp-profile*/**", "**/.chrome-profile*/**", "**/.playwright*/**"],
+        },
     },
-  },
-})
+});

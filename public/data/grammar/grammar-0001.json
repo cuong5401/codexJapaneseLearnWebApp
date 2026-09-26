@@ -1,0 +1,413 @@
+[
+  {
+    "id": "grammar-desu",
+    "datasetVersion": "0.1.0-dev.2",
+    "pattern": "です",
+    "normalizedPattern": "です",
+    "meaningVi": [
+      "là; dạng lịch sự của câu danh từ/tính từ"
+    ],
+    "meaningEn": [
+      "to be; polite copula"
+    ],
+    "jlptLevel": "N5",
+    "formation": [
+      "Danh từ / tính từ な + です",
+      "Tính từ い + です"
+    ],
+    "explanationVi": "Dùng để kết thúc câu khẳng định lịch sự.",
+    "explanationEn": "A polite sentence ending used for statements.",
+    "exampleSentenceIds": [
+      "ex-desu"
+    ],
+    "notes": [],
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "grammar-teiru",
+    "datasetVersion": "0.1.0-dev.2",
+    "pattern": "～ている",
+    "normalizedPattern": "～ている",
+    "meaningVi": [
+      "đang; trạng thái tiếp diễn"
+    ],
+    "meaningEn": [
+      "be doing; resulting state"
+    ],
+    "jlptLevel": "N5",
+    "formation": [
+      "Động từ thể て + いる"
+    ],
+    "explanationVi": "Diễn tả hành động đang diễn ra hoặc trạng thái còn tiếp tục tùy động từ.",
+    "explanationEn": "Describes an action in progress or a continuing state, depending on the verb.",
+    "exampleSentenceIds": [
+      "ex-study"
+    ],
+    "notes": [],
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "grammar-ta-koto-ga-aru",
+    "datasetVersion": "0.1.0-dev.2",
+    "pattern": "～たことがある",
+    "normalizedPattern": "～たことがある",
+    "meaningVi": [
+      "đã từng làm"
+    ],
+    "meaningEn": [
+      "have done before"
+    ],
+    "jlptLevel": "N4",
+    "formation": [
+      "Động từ thể た + ことがある"
+    ],
+    "explanationVi": "Nói về kinh nghiệm đã có trong quá khứ.",
+    "explanationEn": "Expresses an experience someone has had in the past.",
+    "exampleSentenceIds": [
+      "ex-experience"
+    ],
+    "notes": [],
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "grammar-nagara",
+    "datasetVersion": "0.1.0-dev.2",
+    "pattern": "～ながら",
+    "normalizedPattern": "～ながら",
+    "meaningVi": [
+      "vừa … vừa …"
+    ],
+    "meaningEn": [
+      "while doing"
+    ],
+    "jlptLevel": "N4",
+    "formation": [
+      "Thân động từ masu + ながら"
+    ],
+    "explanationVi": "Hai hành động do cùng một chủ thể thực hiện đồng thời.",
+    "explanationEn": "Two actions performed at the same time by the same subject.",
+    "exampleSentenceIds": [
+      "ex-nagara"
+    ],
+    "notes": [],
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "grammar-you-ni-suru",
+    "datasetVersion": "0.1.0-dev.2",
+    "pattern": "～ようにする",
+    "normalizedPattern": "～ようにする",
+    "meaningVi": [
+      "cố gắng / tạo thói quen làm"
+    ],
+    "meaningEn": [
+      "make an effort to; make a habit of"
+    ],
+    "jlptLevel": "N3",
+    "formation": [
+      "Động từ thể từ điển / thể ない + ようにする"
+    ],
+    "explanationVi": "Diễn tả nỗ lực có chủ ý để thực hiện hoặc tránh một việc.",
+    "explanationEn": "Describes a deliberate effort to do or avoid something.",
+    "exampleSentenceIds": [
+      "ex-review"
+    ],
+    "notes": [],
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "grammar-wake-dewa-nai",
+    "datasetVersion": "0.1.0-dev.2",
+    "pattern": "～わけではない",
+    "normalizedPattern": "～わけではない",
+    "meaningVi": [
+      "không hẳn là; không có nghĩa là"
+    ],
+    "meaningEn": [
+      "it does not mean that; not necessarily"
+    ],
+    "jlptLevel": "N2",
+    "formation": [
+      "Câu thể thông thường + わけではない"
+    ],
+    "explanationVi": "Phủ định một kết luận chung hoặc làm rõ rằng điều gì đó không đúng trong mọi trường hợp.",
+    "explanationEn": "Softens or rejects a general conclusion; something is not true in every case.",
+    "exampleSentenceIds": [
+      "ex-not-necessarily"
+    ],
+    "notes": [],
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "grammar-naide-kudasai",
+    "datasetVersion": "0.1.0-dev.2",
+    "pattern": "～ないでください",
+    "normalizedPattern": "~ないでください",
+    "meaningVi": [
+      "Xin đừng làm…"
+    ],
+    "meaningEn": [
+      "please do not; please refrain from"
+    ],
+    "jlptLevel": "N5",
+    "formation": [
+      "Vない + でください"
+    ],
+    "explanationVi": "Dùng để đưa ra yêu cầu lịch sự không thực hiện một hành động.",
+    "explanationEn": "A polite request asking someone not to do something.",
+    "exampleSentenceIds": [
+      "ex-grammar-naide"
+    ],
+    "notes": [],
+    "tags": [
+      "dev-seed",
+      "phase4-reviewed"
+    ]
+  },
+  {
+    "id": "grammar-te-kara",
+    "datasetVersion": "0.1.0-dev.2",
+    "pattern": "～てから",
+    "normalizedPattern": "~てから",
+    "meaningVi": [
+      "sau khi làm…"
+    ],
+    "meaningEn": [
+      "after doing"
+    ],
+    "jlptLevel": "N5",
+    "formation": [
+      "Vて + から"
+    ],
+    "explanationVi": "Diễn tả hành động thứ hai xảy ra sau khi hành động thứ nhất hoàn tất.",
+    "explanationEn": "Indicates that one action happens after another is completed.",
+    "exampleSentenceIds": [
+      "ex-study"
+    ],
+    "notes": [],
+    "tags": [
+      "dev-seed",
+      "phase4-reviewed"
+    ]
+  },
+  {
+    "id": "grammar-te-shimau",
+    "datasetVersion": "0.1.0-dev.2",
+    "pattern": "～てしまう",
+    "normalizedPattern": "~てしまう",
+    "meaningVi": [
+      "lỡ; làm xong mất rồi"
+    ],
+    "meaningEn": [
+      "end up doing; do completely"
+    ],
+    "jlptLevel": "N4",
+    "formation": [
+      "Vて + しまう"
+    ],
+    "explanationVi": "Có thể diễn tả hành động hoàn tất hoặc điều không mong muốn đã xảy ra.",
+    "explanationEn": "Can express completion or an unintended, regrettable result.",
+    "exampleSentenceIds": [
+      "ex-grammar-shimau"
+    ],
+    "notes": [],
+    "tags": [
+      "dev-seed",
+      "phase4-reviewed"
+    ]
+  },
+  {
+    "id": "grammar-yotei",
+    "datasetVersion": "0.1.0-dev.2",
+    "pattern": "～予定だ",
+    "normalizedPattern": "~予定だ",
+    "meaningVi": [
+      "dự định; theo kế hoạch"
+    ],
+    "meaningEn": [
+      "plan to; be scheduled to"
+    ],
+    "jlptLevel": "N4",
+    "formation": [
+      "Vる / Nの + 予定だ"
+    ],
+    "explanationVi": "Nói về kế hoạch hoặc lịch trình đã định.",
+    "explanationEn": "Describes a plan or scheduled event.",
+    "exampleSentenceIds": [
+      "ex-school"
+    ],
+    "notes": [],
+    "tags": [
+      "dev-seed",
+      "phase4-reviewed"
+    ]
+  },
+  {
+    "id": "grammar-kotonisuru",
+    "datasetVersion": "0.1.0-dev.2",
+    "pattern": "～ことにする",
+    "normalizedPattern": "~ことにする",
+    "meaningVi": [
+      "quyết định làm…"
+    ],
+    "meaningEn": [
+      "decide to do"
+    ],
+    "jlptLevel": "N3",
+    "formation": [
+      "Vる / Vない + ことにする"
+    ],
+    "explanationVi": "Diễn tả quyết định do chính người nói đưa ra.",
+    "explanationEn": "Expresses a decision made by the speaker.",
+    "exampleSentenceIds": [
+      "ex-grammar-kotonisuru"
+    ],
+    "notes": [],
+    "tags": [
+      "dev-seed",
+      "phase4-reviewed"
+    ]
+  },
+  {
+    "id": "grammar-hazuda",
+    "datasetVersion": "0.1.0-dev.2",
+    "pattern": "～はずだ",
+    "normalizedPattern": "~はずだ",
+    "meaningVi": [
+      "chắc là; lẽ ra"
+    ],
+    "meaningEn": [
+      "should; be expected to"
+    ],
+    "jlptLevel": "N3",
+    "formation": [
+      "普通形 + はずだ"
+    ],
+    "explanationVi": "Diễn tả điều được suy ra từ thông tin hoặc lý do đã biết.",
+    "explanationEn": "Expresses an expectation or conclusion based on known information.",
+    "exampleSentenceIds": [
+      "ex-experience"
+    ],
+    "notes": [],
+    "tags": [
+      "dev-seed",
+      "phase4-reviewed"
+    ]
+  },
+  {
+    "id": "grammar-ni-chigainai",
+    "datasetVersion": "0.1.0-dev.2",
+    "pattern": "～に違いない",
+    "normalizedPattern": "~に違いない",
+    "meaningVi": [
+      "chắc chắn là"
+    ],
+    "meaningEn": [
+      "must be; surely"
+    ],
+    "jlptLevel": "N2",
+    "formation": [
+      "普通形 + に違いない"
+    ],
+    "explanationVi": "Nêu suy đoán mạnh dựa trên căn cứ mà người nói tin là thuyết phục.",
+    "explanationEn": "States a strong inference the speaker considers well supported.",
+    "exampleSentenceIds": [
+      "ex-grammar-ni-chigainai"
+    ],
+    "notes": [],
+    "tags": [
+      "dev-seed",
+      "phase4-reviewed"
+    ]
+  },
+  {
+    "id": "grammar-wake-ni-wa-ikanai",
+    "datasetVersion": "0.1.0-dev.2",
+    "pattern": "～わけにはいかない",
+    "normalizedPattern": "~わけにはいかない",
+    "meaningVi": [
+      "không thể (vì trách nhiệm/hoàn cảnh)"
+    ],
+    "meaningEn": [
+      "cannot; must not (due to circumstances)"
+    ],
+    "jlptLevel": "N2",
+    "formation": [
+      "Vる + わけにはいかない"
+    ],
+    "explanationVi": "Diễn tả việc không thể làm vì nghĩa vụ, trách nhiệm hoặc hoàn cảnh.",
+    "explanationEn": "Expresses that circumstances or responsibility make an action impossible.",
+    "exampleSentenceIds": [
+      "ex-grammar-wake-ni-wa-ikanai"
+    ],
+    "notes": [],
+    "tags": [
+      "dev-seed",
+      "phase4-reviewed"
+    ]
+  },
+  {
+    "id": "grammar-ni-mo-kakawarazu",
+    "datasetVersion": "0.1.0-dev.2",
+    "pattern": "～にもかかわらず",
+    "normalizedPattern": "~にもかかわらず",
+    "meaningVi": [
+      "mặc dù; bất chấp"
+    ],
+    "meaningEn": [
+      "despite; although"
+    ],
+    "jlptLevel": "N2",
+    "formation": [
+      "普通形 / N + にもかかわらず"
+    ],
+    "explanationVi": "Nối hai mệnh đề có nội dung trái với điều được mong đợi.",
+    "explanationEn": "Connects clauses when the result is contrary to expectation.",
+    "exampleSentenceIds": [
+      "ex-grammar-nimokakawarazu"
+    ],
+    "notes": [],
+    "tags": [
+      "dev-seed",
+      "phase4-reviewed"
+    ]
+  },
+  {
+    "id": "grammar-wo-kinjienai",
+    "datasetVersion": "0.1.0-dev.2",
+    "pattern": "～を禁じ得ない",
+    "normalizedPattern": "~を禁じ得ない",
+    "meaningVi": [
+      "không thể kìm nén; không khỏi"
+    ],
+    "meaningEn": [
+      "cannot help; be unable to suppress"
+    ],
+    "jlptLevel": "N1",
+    "formation": [
+      "N + を禁じ得ない"
+    ],
+    "explanationVi": "Diễn tả cảm xúc mạnh không thể kìm nén trước một sự việc.",
+    "explanationEn": "Describes a strong feeling that cannot be suppressed in response to something.",
+    "exampleSentenceIds": [
+      "ex-grammar-kinjienai"
+    ],
+    "notes": [],
+    "tags": [
+      "dev-seed",
+      "phase4-reviewed"
+    ]
+  }
+]

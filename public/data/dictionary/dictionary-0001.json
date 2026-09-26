@@ -1,0 +1,784 @@
+[
+  {
+    "id": "seed-日本語",
+    "datasetVersion": "0.1.0-dev.2",
+    "word": "日本語",
+    "reading": "にほんご",
+    "normalizedWord": "日本語",
+    "normalizedReading": "にほんこ",
+    "meanings": {
+      "vi": [
+        "tiếng Nhật"
+      ],
+      "en": [
+        "Japanese language"
+      ]
+    },
+    "partsOfSpeech": [
+      "noun"
+    ],
+    "jlptLevel": null,
+    "isCommon": true,
+    "frequencyRank": null,
+    "kanjiIds": [
+      "日",
+      "本",
+      "語"
+    ],
+    "exampleSentenceIds": [
+      "ex-japanese"
+    ],
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "seed-学校",
+    "datasetVersion": "0.1.0-dev.2",
+    "word": "学校",
+    "reading": "がっこう",
+    "normalizedWord": "学校",
+    "normalizedReading": "がっこう",
+    "meanings": {
+      "vi": [
+        "trường học"
+      ],
+      "en": [
+        "school"
+      ]
+    },
+    "partsOfSpeech": [
+      "noun"
+    ],
+    "jlptLevel": null,
+    "isCommon": true,
+    "frequencyRank": null,
+    "kanjiIds": [
+      "学",
+      "校"
+    ],
+    "exampleSentenceIds": [
+      "ex-school"
+    ],
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "seed-学生",
+    "datasetVersion": "0.1.0-dev.2",
+    "word": "学生",
+    "reading": "がくせい",
+    "normalizedWord": "学生",
+    "normalizedReading": "がくせい",
+    "meanings": {
+      "vi": [
+        "học sinh; sinh viên"
+      ],
+      "en": [
+        "student"
+      ]
+    },
+    "partsOfSpeech": [
+      "noun"
+    ],
+    "jlptLevel": null,
+    "isCommon": true,
+    "frequencyRank": null,
+    "kanjiIds": [
+      "学",
+      "生"
+    ],
+    "exampleSentenceIds": [],
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "seed-勉強",
+    "datasetVersion": "0.1.0-dev.2",
+    "word": "勉強",
+    "reading": "べんきょう",
+    "normalizedWord": "勉強",
+    "normalizedReading": "べんきょう",
+    "meanings": {
+      "vi": [
+        "việc học; học tập"
+      ],
+      "en": [
+        "study"
+      ]
+    },
+    "partsOfSpeech": [
+      "noun",
+      "suru-verb"
+    ],
+    "jlptLevel": null,
+    "isCommon": true,
+    "frequencyRank": null,
+    "kanjiIds": [
+      "勉",
+      "強"
+    ],
+    "exampleSentenceIds": [
+      "ex-study"
+    ],
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "seed-食べる",
+    "datasetVersion": "0.1.0-dev.2",
+    "word": "食べる",
+    "reading": "たべる",
+    "normalizedWord": "食べる",
+    "normalizedReading": "たべる",
+    "meanings": {
+      "vi": [
+        "ăn"
+      ],
+      "en": [
+        "to eat"
+      ]
+    },
+    "partsOfSpeech": [
+      "ichidan-verb"
+    ],
+    "jlptLevel": null,
+    "isCommon": true,
+    "frequencyRank": null,
+    "kanjiIds": [
+      "食"
+    ],
+    "exampleSentenceIds": [
+      "ex-eat"
+    ],
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "seed-影響",
+    "datasetVersion": "0.1.0-dev.2",
+    "word": "影響",
+    "reading": "えいきょう",
+    "normalizedWord": "影響",
+    "normalizedReading": "えいきょう",
+    "meanings": {
+      "vi": [
+        "ảnh hưởng; tác động"
+      ],
+      "en": [
+        "influence; effect"
+      ]
+    },
+    "partsOfSpeech": [
+      "noun",
+      "suru-verb"
+    ],
+    "jlptLevel": null,
+    "isCommon": true,
+    "frequencyRank": null,
+    "kanjiIds": [
+      "影",
+      "響"
+    ],
+    "exampleSentenceIds": [
+      "ex-influence"
+    ],
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "seed-支払う",
+    "datasetVersion": "0.1.0-dev.2",
+    "word": "支払う",
+    "reading": "しはらう",
+    "normalizedWord": "支払う",
+    "normalizedReading": "しはらう",
+    "meanings": {
+      "vi": [
+        "thanh toán; chi trả"
+      ],
+      "en": [
+        "to pay"
+      ]
+    },
+    "partsOfSpeech": [
+      "godan-verb"
+    ],
+    "jlptLevel": null,
+    "isCommon": true,
+    "frequencyRank": null,
+    "kanjiIds": [
+      "支",
+      "払"
+    ],
+    "exampleSentenceIds": [
+      "ex-pay"
+    ],
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "seed-上昇",
+    "datasetVersion": "0.1.0-dev.2",
+    "word": "上昇",
+    "reading": "じょうしょう",
+    "normalizedWord": "上昇",
+    "normalizedReading": "じょうしょう",
+    "meanings": {
+      "vi": [
+        "sự tăng lên; tăng"
+      ],
+      "en": [
+        "rise; increase"
+      ]
+    },
+    "partsOfSpeech": [
+      "noun",
+      "suru-verb"
+    ],
+    "jlptLevel": null,
+    "isCommon": true,
+    "frequencyRank": null,
+    "kanjiIds": [
+      "上",
+      "昇"
+    ],
+    "exampleSentenceIds": [
+      "ex-rise"
+    ],
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "seed-読書",
+    "datasetVersion": "0.1.0-dev.2",
+    "word": "読書",
+    "reading": "どくしょ",
+    "normalizedWord": "読書",
+    "normalizedReading": "どくしょ",
+    "meanings": {
+      "vi": [
+        "việc đọc sách"
+      ],
+      "en": [
+        "reading; reading books"
+      ]
+    },
+    "partsOfSpeech": [
+      "noun",
+      "suru-verb"
+    ],
+    "jlptLevel": null,
+    "isCommon": true,
+    "frequencyRank": null,
+    "kanjiIds": [
+      "読",
+      "書"
+    ],
+    "exampleSentenceIds": [
+      "ex-read"
+    ],
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "seed-対応",
+    "datasetVersion": "0.1.0-dev.2",
+    "word": "対応",
+    "reading": "たいおう",
+    "normalizedWord": "対応",
+    "normalizedReading": "たいおう",
+    "meanings": {
+      "vi": [
+        "ứng phó; xử lý; tương ứng"
+      ],
+      "en": [
+        "response; dealing with; correspondence"
+      ]
+    },
+    "partsOfSpeech": [
+      "noun",
+      "suru-verb"
+    ],
+    "jlptLevel": null,
+    "isCommon": true,
+    "frequencyRank": null,
+    "kanjiIds": [
+      "対",
+      "応"
+    ],
+    "exampleSentenceIds": [
+      "ex-response"
+    ],
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "seed-保存",
+    "datasetVersion": "0.1.0-dev.2",
+    "word": "保存",
+    "reading": "ほぞん",
+    "normalizedWord": "保存",
+    "normalizedReading": "ほぞん",
+    "meanings": {
+      "vi": [
+        "bảo quản; lưu giữ"
+      ],
+      "en": [
+        "preservation; to save"
+      ]
+    },
+    "partsOfSpeech": [
+      "noun",
+      "suru-verb"
+    ],
+    "jlptLevel": null,
+    "isCommon": true,
+    "frequencyRank": null,
+    "kanjiIds": [
+      "保",
+      "存"
+    ],
+    "exampleSentenceIds": [],
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "seed-読解",
+    "datasetVersion": "0.1.0-dev.2",
+    "word": "読解",
+    "reading": "どっかい",
+    "normalizedWord": "読解",
+    "normalizedReading": "どっかい",
+    "meanings": {
+      "vi": [
+        "đọc hiểu"
+      ],
+      "en": [
+        "reading comprehension"
+      ]
+    },
+    "partsOfSpeech": [
+      "noun",
+      "suru-verb"
+    ],
+    "jlptLevel": null,
+    "isCommon": true,
+    "frequencyRank": null,
+    "kanjiIds": [
+      "読",
+      "解"
+    ],
+    "exampleSentenceIds": [
+      "ex-comprehension"
+    ],
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "required-推薦",
+    "datasetVersion": "0.1.0-dev.2",
+    "word": "推薦",
+    "reading": "すいせん",
+    "normalizedWord": "推薦",
+    "normalizedReading": "すいせん",
+    "meanings": {
+      "vi": [
+        "sự giới thiệu; đề cử"
+      ],
+      "en": [
+        "recommendation; endorsement"
+      ]
+    },
+    "partsOfSpeech": [
+      "noun",
+      "suru-verb"
+    ],
+    "jlptLevel": null,
+    "isCommon": null,
+    "frequencyRank": null,
+    "kanjiIds": [
+      "推",
+      "薦"
+    ],
+    "exampleSentenceIds": [
+      "ex-推薦"
+    ],
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "required-推奨",
+    "datasetVersion": "0.1.0-dev.2",
+    "word": "推奨",
+    "reading": "すいしょう",
+    "normalizedWord": "推奨",
+    "normalizedReading": "すいしょう",
+    "meanings": {
+      "vi": [
+        "sự khuyến nghị; khuyến nghị"
+      ],
+      "en": [
+        "recommendation; to recommend"
+      ]
+    },
+    "partsOfSpeech": [
+      "noun",
+      "suru-verb"
+    ],
+    "jlptLevel": null,
+    "isCommon": null,
+    "frequencyRank": null,
+    "kanjiIds": [
+      "推",
+      "奨"
+    ],
+    "exampleSentenceIds": [
+      "ex-推奨"
+    ],
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "required-改善",
+    "datasetVersion": "0.1.0-dev.2",
+    "word": "改善",
+    "reading": "かいぜん",
+    "normalizedWord": "改善",
+    "normalizedReading": "かいぜん",
+    "meanings": {
+      "vi": [
+        "sự cải thiện; cải thiện"
+      ],
+      "en": [
+        "improvement; to improve"
+      ]
+    },
+    "partsOfSpeech": [
+      "noun",
+      "suru-verb"
+    ],
+    "jlptLevel": null,
+    "isCommon": null,
+    "frequencyRank": null,
+    "kanjiIds": [
+      "改",
+      "善"
+    ],
+    "exampleSentenceIds": [
+      "ex-改善"
+    ],
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "required-影響",
+    "datasetVersion": "0.1.0-dev.2",
+    "word": "影響",
+    "reading": "えいきょう",
+    "normalizedWord": "影響",
+    "normalizedReading": "えいきょう",
+    "meanings": {
+      "vi": [
+        "ảnh hưởng; tác động"
+      ],
+      "en": [
+        "influence; effect"
+      ]
+    },
+    "partsOfSpeech": [
+      "noun",
+      "suru-verb"
+    ],
+    "jlptLevel": null,
+    "isCommon": null,
+    "frequencyRank": null,
+    "kanjiIds": [
+      "影",
+      "響"
+    ],
+    "exampleSentenceIds": [
+      "ex-影響"
+    ],
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "required-省略",
+    "datasetVersion": "0.1.0-dev.2",
+    "word": "省略",
+    "reading": "しょうりゃく",
+    "normalizedWord": "省略",
+    "normalizedReading": "しょうりゃく",
+    "meanings": {
+      "vi": [
+        "sự lược bỏ; lược bỏ"
+      ],
+      "en": [
+        "omission; abbreviation"
+      ]
+    },
+    "partsOfSpeech": [
+      "noun",
+      "suru-verb"
+    ],
+    "jlptLevel": null,
+    "isCommon": null,
+    "frequencyRank": null,
+    "kanjiIds": [
+      "省",
+      "略"
+    ],
+    "exampleSentenceIds": [
+      "ex-省略"
+    ],
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "required-把握",
+    "datasetVersion": "0.1.0-dev.2",
+    "word": "把握",
+    "reading": "はあく",
+    "normalizedWord": "把握",
+    "normalizedReading": "はあく",
+    "meanings": {
+      "vi": [
+        "sự nắm bắt; nắm rõ"
+      ],
+      "en": [
+        "grasp; understanding"
+      ]
+    },
+    "partsOfSpeech": [
+      "noun",
+      "suru-verb"
+    ],
+    "jlptLevel": null,
+    "isCommon": null,
+    "frequencyRank": null,
+    "kanjiIds": [
+      "把",
+      "握"
+    ],
+    "exampleSentenceIds": [
+      "ex-把握"
+    ],
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "required-検討",
+    "datasetVersion": "0.1.0-dev.2",
+    "word": "検討",
+    "reading": "けんとう",
+    "normalizedWord": "検討",
+    "normalizedReading": "けんとう",
+    "meanings": {
+      "vi": [
+        "sự xem xét; cân nhắc"
+      ],
+      "en": [
+        "consideration; examination"
+      ]
+    },
+    "partsOfSpeech": [
+      "noun",
+      "suru-verb"
+    ],
+    "jlptLevel": null,
+    "isCommon": null,
+    "frequencyRank": null,
+    "kanjiIds": [
+      "検",
+      "討"
+    ],
+    "exampleSentenceIds": [
+      "ex-検討"
+    ],
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "required-対応",
+    "datasetVersion": "0.1.0-dev.2",
+    "word": "対応",
+    "reading": "たいおう",
+    "normalizedWord": "対応",
+    "normalizedReading": "たいおう",
+    "meanings": {
+      "vi": [
+        "sự ứng phó; xử lý"
+      ],
+      "en": [
+        "response; handling"
+      ]
+    },
+    "partsOfSpeech": [
+      "noun",
+      "suru-verb"
+    ],
+    "jlptLevel": null,
+    "isCommon": null,
+    "frequencyRank": null,
+    "kanjiIds": [
+      "対",
+      "応"
+    ],
+    "exampleSentenceIds": [
+      "ex-対応"
+    ],
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "required-促進",
+    "datasetVersion": "0.1.0-dev.2",
+    "word": "促進",
+    "reading": "そくしん",
+    "normalizedWord": "促進",
+    "normalizedReading": "そくしん",
+    "meanings": {
+      "vi": [
+        "sự thúc đẩy; thúc đẩy"
+      ],
+      "en": [
+        "promotion; facilitation"
+      ]
+    },
+    "partsOfSpeech": [
+      "noun",
+      "suru-verb"
+    ],
+    "jlptLevel": null,
+    "isCommon": null,
+    "frequencyRank": null,
+    "kanjiIds": [
+      "促",
+      "進"
+    ],
+    "exampleSentenceIds": [
+      "ex-促進"
+    ],
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "required-進捗",
+    "datasetVersion": "0.1.0-dev.2",
+    "word": "進捗",
+    "reading": "しんちょく",
+    "normalizedWord": "進捗",
+    "normalizedReading": "しんちょく",
+    "meanings": {
+      "vi": [
+        "tiến độ"
+      ],
+      "en": [
+        "progress; progress status"
+      ]
+    },
+    "partsOfSpeech": [
+      "noun"
+    ],
+    "jlptLevel": null,
+    "isCommon": null,
+    "frequencyRank": null,
+    "kanjiIds": [
+      "進",
+      "捗"
+    ],
+    "exampleSentenceIds": [
+      "ex-進捗"
+    ],
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "required-上昇",
+    "datasetVersion": "0.1.0-dev.2",
+    "word": "上昇",
+    "reading": "じょうしょう",
+    "normalizedWord": "上昇",
+    "normalizedReading": "じょうしょう",
+    "meanings": {
+      "vi": [
+        "sự tăng lên; tăng"
+      ],
+      "en": [
+        "rise; increase"
+      ]
+    },
+    "partsOfSpeech": [
+      "noun",
+      "suru-verb"
+    ],
+    "jlptLevel": null,
+    "isCommon": null,
+    "frequencyRank": null,
+    "kanjiIds": [
+      "上",
+      "昇"
+    ],
+    "exampleSentenceIds": [
+      "ex-上昇"
+    ],
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "required-読解",
+    "datasetVersion": "0.1.0-dev.2",
+    "word": "読解",
+    "reading": "どっかい",
+    "normalizedWord": "読解",
+    "normalizedReading": "どっかい",
+    "meanings": {
+      "vi": [
+        "đọc hiểu"
+      ],
+      "en": [
+        "reading comprehension"
+      ]
+    },
+    "partsOfSpeech": [
+      "noun",
+      "suru-verb"
+    ],
+    "jlptLevel": null,
+    "isCommon": null,
+    "frequencyRank": null,
+    "kanjiIds": [
+      "読",
+      "解"
+    ],
+    "exampleSentenceIds": [
+      "ex-読解"
+    ],
+    "tags": [
+      "dev-seed"
+    ]
+  }
+]

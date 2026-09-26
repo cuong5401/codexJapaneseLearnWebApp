@@ -1,0 +1,1056 @@
+[
+  {
+    "id": "日",
+    "datasetVersion": "0.1.0-dev.2",
+    "character": "日",
+    "meanings": {
+      "vi": [
+        "ngày; mặt trời"
+      ],
+      "en": [
+        "day; sun"
+      ]
+    },
+    "onyomi": [
+      "ニチ",
+      "ジツ"
+    ],
+    "kunyomi": [
+      "ひ",
+      "か"
+    ],
+    "strokeCount": 4,
+    "radical": "日",
+    "radicalName": null,
+    "jlptLevel": "N5",
+    "grade": 1,
+    "frequencyRank": null,
+    "commonCompounds": [
+      "日本",
+      "日曜日"
+    ],
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "本",
+    "datasetVersion": "0.1.0-dev.2",
+    "character": "本",
+    "meanings": {
+      "vi": [
+        "sách; gốc"
+      ],
+      "en": [
+        "book; origin"
+      ]
+    },
+    "onyomi": [
+      "ホン"
+    ],
+    "kunyomi": [
+      "もと"
+    ],
+    "strokeCount": 5,
+    "radical": "木",
+    "radicalName": null,
+    "jlptLevel": "N5",
+    "grade": 1,
+    "frequencyRank": null,
+    "commonCompounds": [
+      "日本",
+      "本当"
+    ],
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "語",
+    "datasetVersion": "0.1.0-dev.2",
+    "character": "語",
+    "meanings": {
+      "vi": [
+        "ngôn ngữ; từ"
+      ],
+      "en": [
+        "language; word"
+      ]
+    },
+    "onyomi": [
+      "ゴ"
+    ],
+    "kunyomi": [
+      "かた.る"
+    ],
+    "strokeCount": 14,
+    "radical": "言",
+    "radicalName": null,
+    "jlptLevel": "N5",
+    "grade": 2,
+    "frequencyRank": null,
+    "commonCompounds": [
+      "日本語",
+      "英語"
+    ],
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "学",
+    "datasetVersion": "0.1.0-dev.2",
+    "character": "学",
+    "meanings": {
+      "vi": [
+        "học"
+      ],
+      "en": [
+        "study; learning"
+      ]
+    },
+    "onyomi": [
+      "ガク"
+    ],
+    "kunyomi": [
+      "まな.ぶ"
+    ],
+    "strokeCount": 8,
+    "radical": "子",
+    "radicalName": null,
+    "jlptLevel": "N5",
+    "grade": 1,
+    "frequencyRank": null,
+    "commonCompounds": [
+      "学校",
+      "学生"
+    ],
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "校",
+    "datasetVersion": "0.1.0-dev.2",
+    "character": "校",
+    "meanings": {
+      "vi": [
+        "trường học"
+      ],
+      "en": [
+        "school"
+      ]
+    },
+    "onyomi": [
+      "コウ"
+    ],
+    "kunyomi": [],
+    "strokeCount": 10,
+    "radical": "木",
+    "radicalName": null,
+    "jlptLevel": "N5",
+    "grade": 1,
+    "frequencyRank": null,
+    "commonCompounds": [
+      "学校"
+    ],
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "生",
+    "datasetVersion": "0.1.0-dev.2",
+    "character": "生",
+    "meanings": {
+      "vi": [
+        "sống; sinh"
+      ],
+      "en": [
+        "life; birth"
+      ]
+    },
+    "onyomi": [
+      "セイ",
+      "ショウ"
+    ],
+    "kunyomi": [
+      "い.きる",
+      "う.まれる"
+    ],
+    "strokeCount": 5,
+    "radical": "生",
+    "radicalName": null,
+    "jlptLevel": null,
+    "grade": 1,
+    "frequencyRank": null,
+    "commonCompounds": [
+      "学生",
+      "先生"
+    ],
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "食",
+    "datasetVersion": "0.1.0-dev.2",
+    "character": "食",
+    "meanings": {
+      "vi": [
+        "ăn; thức ăn"
+      ],
+      "en": [
+        "eat; food"
+      ]
+    },
+    "onyomi": [
+      "ショク"
+    ],
+    "kunyomi": [
+      "た.べる",
+      "く.う"
+    ],
+    "strokeCount": 9,
+    "radical": "食",
+    "radicalName": null,
+    "jlptLevel": "N4",
+    "grade": 2,
+    "frequencyRank": null,
+    "commonCompounds": [
+      "食べる",
+      "食事"
+    ],
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "影",
+    "datasetVersion": "0.1.0-dev.2",
+    "character": "影",
+    "meanings": {
+      "vi": [
+        "bóng; ảnh"
+      ],
+      "en": [
+        "shadow; reflection"
+      ]
+    },
+    "onyomi": [
+      "エイ"
+    ],
+    "kunyomi": [
+      "かげ"
+    ],
+    "strokeCount": 15,
+    "radical": "彡",
+    "radicalName": null,
+    "jlptLevel": null,
+    "grade": null,
+    "frequencyRank": null,
+    "commonCompounds": [
+      "影響"
+    ],
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "響",
+    "datasetVersion": "0.1.0-dev.2",
+    "character": "響",
+    "meanings": {
+      "vi": [
+        "vang; ảnh hưởng"
+      ],
+      "en": [
+        "echo; influence"
+      ]
+    },
+    "onyomi": [
+      "キョウ"
+    ],
+    "kunyomi": [
+      "ひび.く"
+    ],
+    "strokeCount": 20,
+    "radical": "音",
+    "radicalName": null,
+    "jlptLevel": null,
+    "grade": null,
+    "frequencyRank": null,
+    "commonCompounds": [
+      "影響"
+    ],
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "支",
+    "datasetVersion": "0.1.0-dev.2",
+    "character": "支",
+    "meanings": {
+      "vi": [
+        "chi; chống đỡ"
+      ],
+      "en": [
+        "branch; support"
+      ]
+    },
+    "onyomi": [
+      "シ"
+    ],
+    "kunyomi": [
+      "ささ.える"
+    ],
+    "strokeCount": 4,
+    "radical": "支",
+    "radicalName": null,
+    "jlptLevel": null,
+    "grade": null,
+    "frequencyRank": null,
+    "commonCompounds": [
+      "支払う"
+    ],
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "払",
+    "datasetVersion": "0.1.0-dev.2",
+    "character": "払",
+    "meanings": {
+      "vi": [
+        "trả; gạt"
+      ],
+      "en": [
+        "pay; brush off"
+      ]
+    },
+    "onyomi": [
+      "フツ"
+    ],
+    "kunyomi": [
+      "はら.う"
+    ],
+    "strokeCount": 5,
+    "radical": "手",
+    "radicalName": null,
+    "jlptLevel": null,
+    "grade": null,
+    "frequencyRank": null,
+    "commonCompounds": [
+      "支払う"
+    ],
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "上",
+    "datasetVersion": "0.1.0-dev.2",
+    "character": "上",
+    "meanings": {
+      "vi": [
+        "trên; tăng"
+      ],
+      "en": [
+        "above; up"
+      ]
+    },
+    "onyomi": [
+      "ジョウ",
+      "ショウ"
+    ],
+    "kunyomi": [
+      "うえ",
+      "あ.がる"
+    ],
+    "strokeCount": 3,
+    "radical": "一",
+    "radicalName": null,
+    "jlptLevel": "N5",
+    "grade": 1,
+    "frequencyRank": null,
+    "commonCompounds": [
+      "上昇",
+      "上手"
+    ],
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "昇",
+    "datasetVersion": "0.1.0-dev.2",
+    "character": "昇",
+    "meanings": {
+      "vi": [
+        "đi lên; tăng"
+      ],
+      "en": [
+        "rise; ascend"
+      ]
+    },
+    "onyomi": [
+      "ショウ"
+    ],
+    "kunyomi": [
+      "のぼ.る"
+    ],
+    "strokeCount": 8,
+    "radical": "日",
+    "radicalName": null,
+    "jlptLevel": null,
+    "grade": null,
+    "frequencyRank": null,
+    "commonCompounds": [
+      "上昇"
+    ],
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "読",
+    "datasetVersion": "0.1.0-dev.2",
+    "character": "読",
+    "meanings": {
+      "vi": [
+        "đọc"
+      ],
+      "en": [
+        "read"
+      ]
+    },
+    "onyomi": [
+      "ドク",
+      "トク"
+    ],
+    "kunyomi": [
+      "よ.む"
+    ],
+    "strokeCount": 14,
+    "radical": "言",
+    "radicalName": null,
+    "jlptLevel": "N4",
+    "grade": 2,
+    "frequencyRank": null,
+    "commonCompounds": [
+      "読書",
+      "読解"
+    ],
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "書",
+    "datasetVersion": "0.1.0-dev.2",
+    "character": "書",
+    "meanings": {
+      "vi": [
+        "viết; sách"
+      ],
+      "en": [
+        "write; book"
+      ]
+    },
+    "onyomi": [
+      "ショ"
+    ],
+    "kunyomi": [
+      "か.く"
+    ],
+    "strokeCount": 10,
+    "radical": "曰",
+    "radicalName": null,
+    "jlptLevel": "N4",
+    "grade": 2,
+    "frequencyRank": null,
+    "commonCompounds": [
+      "読書"
+    ],
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "対",
+    "datasetVersion": "0.1.0-dev.2",
+    "character": "対",
+    "meanings": {
+      "vi": [
+        "đối; so với"
+      ],
+      "en": [
+        "versus; opposite"
+      ]
+    },
+    "onyomi": [
+      "タイ",
+      "ツイ"
+    ],
+    "kunyomi": [],
+    "strokeCount": 7,
+    "radical": "寸",
+    "radicalName": null,
+    "jlptLevel": null,
+    "grade": 3,
+    "frequencyRank": null,
+    "commonCompounds": [
+      "対応"
+    ],
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "応",
+    "datasetVersion": "0.1.0-dev.2",
+    "character": "応",
+    "meanings": {
+      "vi": [
+        "đáp ứng; phản hồi"
+      ],
+      "en": [
+        "respond; answer"
+      ]
+    },
+    "onyomi": [
+      "オウ"
+    ],
+    "kunyomi": [
+      "こた.える"
+    ],
+    "strokeCount": 7,
+    "radical": "心",
+    "radicalName": null,
+    "jlptLevel": null,
+    "grade": 5,
+    "frequencyRank": null,
+    "commonCompounds": [
+      "対応"
+    ],
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "保",
+    "datasetVersion": "0.1.0-dev.2",
+    "character": "保",
+    "meanings": {
+      "vi": [
+        "giữ; bảo vệ"
+      ],
+      "en": [
+        "preserve; protect"
+      ]
+    },
+    "onyomi": [
+      "ホ"
+    ],
+    "kunyomi": [
+      "たも.つ"
+    ],
+    "strokeCount": 9,
+    "radical": "人",
+    "radicalName": null,
+    "jlptLevel": null,
+    "grade": 5,
+    "frequencyRank": null,
+    "commonCompounds": [
+      "保存"
+    ],
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "存",
+    "datasetVersion": "0.1.0-dev.2",
+    "character": "存",
+    "meanings": {
+      "vi": [
+        "tồn tại"
+      ],
+      "en": [
+        "exist"
+      ]
+    },
+    "onyomi": [
+      "ソン",
+      "ゾン"
+    ],
+    "kunyomi": [],
+    "strokeCount": 6,
+    "radical": "子",
+    "radicalName": null,
+    "jlptLevel": null,
+    "grade": 6,
+    "frequencyRank": null,
+    "commonCompounds": [
+      "保存",
+      "存在"
+    ],
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "解",
+    "datasetVersion": "0.1.0-dev.2",
+    "character": "解",
+    "meanings": {
+      "vi": [
+        "giải; hiểu"
+      ],
+      "en": [
+        "untie; understand"
+      ]
+    },
+    "onyomi": [
+      "カイ",
+      "ゲ"
+    ],
+    "kunyomi": [
+      "と.く",
+      "わか.る"
+    ],
+    "strokeCount": 13,
+    "radical": "角",
+    "radicalName": null,
+    "jlptLevel": "N4",
+    "grade": 5,
+    "frequencyRank": null,
+    "commonCompounds": [
+      "読解",
+      "理解"
+    ],
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "推",
+    "datasetVersion": "0.1.0-dev.2",
+    "character": "推",
+    "meanings": {
+      "vi": [
+        "đẩy; đề cử"
+      ],
+      "en": [
+        "push; recommend"
+      ]
+    },
+    "onyomi": [
+      "スイ"
+    ],
+    "kunyomi": [
+      "お.す"
+    ],
+    "strokeCount": 11,
+    "radical": "手",
+    "radicalName": null,
+    "jlptLevel": "N2",
+    "grade": null,
+    "frequencyRank": null,
+    "commonCompounds": [
+      "推薦",
+      "推奨"
+    ],
+    "tags": [
+      "dev-seed",
+      "phase4-reviewed"
+    ]
+  },
+  {
+    "id": "薦",
+    "datasetVersion": "0.1.0-dev.2",
+    "character": "薦",
+    "meanings": {
+      "vi": [
+        "tiến cử; giới thiệu"
+      ],
+      "en": [
+        "recommend; suggest"
+      ]
+    },
+    "onyomi": [
+      "セン"
+    ],
+    "kunyomi": [
+      "すす.める"
+    ],
+    "strokeCount": 16,
+    "radical": "艹",
+    "radicalName": null,
+    "jlptLevel": "N1",
+    "grade": null,
+    "frequencyRank": null,
+    "commonCompounds": [
+      "推薦"
+    ],
+    "tags": [
+      "dev-seed",
+      "phase4-reviewed"
+    ]
+  },
+  {
+    "id": "改",
+    "datasetVersion": "0.1.0-dev.2",
+    "character": "改",
+    "meanings": {
+      "vi": [
+        "sửa đổi; cải thiện"
+      ],
+      "en": [
+        "reform; revise"
+      ]
+    },
+    "onyomi": [
+      "カイ"
+    ],
+    "kunyomi": [
+      "あらた.める",
+      "あらた.まる"
+    ],
+    "strokeCount": 7,
+    "radical": "攵",
+    "radicalName": null,
+    "jlptLevel": "N3",
+    "grade": null,
+    "frequencyRank": null,
+    "commonCompounds": [
+      "改善"
+    ],
+    "tags": [
+      "dev-seed",
+      "phase4-reviewed"
+    ]
+  },
+  {
+    "id": "善",
+    "datasetVersion": "0.1.0-dev.2",
+    "character": "善",
+    "meanings": {
+      "vi": [
+        "tốt; thiện"
+      ],
+      "en": [
+        "good; virtuous"
+      ]
+    },
+    "onyomi": [
+      "ゼン"
+    ],
+    "kunyomi": [
+      "よ.い"
+    ],
+    "strokeCount": 12,
+    "radical": "口",
+    "radicalName": null,
+    "jlptLevel": "N3",
+    "grade": null,
+    "frequencyRank": null,
+    "commonCompounds": [
+      "改善"
+    ],
+    "tags": [
+      "dev-seed",
+      "phase4-reviewed"
+    ]
+  },
+  {
+    "id": "略",
+    "datasetVersion": "0.1.0-dev.2",
+    "character": "略",
+    "meanings": {
+      "vi": [
+        "lược bỏ; sơ lược"
+      ],
+      "en": [
+        "omit; abbreviation"
+      ]
+    },
+    "onyomi": [
+      "リャク"
+    ],
+    "kunyomi": [
+      "ほぼ"
+    ],
+    "strokeCount": 11,
+    "radical": "田",
+    "radicalName": null,
+    "jlptLevel": "N2",
+    "grade": null,
+    "frequencyRank": null,
+    "commonCompounds": [
+      "省略"
+    ],
+    "tags": [
+      "dev-seed",
+      "phase4-reviewed"
+    ]
+  },
+  {
+    "id": "把",
+    "datasetVersion": "0.1.0-dev.2",
+    "character": "把",
+    "meanings": {
+      "vi": [
+        "nắm; cầm"
+      ],
+      "en": [
+        "grasp; hold"
+      ]
+    },
+    "onyomi": [
+      "ハ"
+    ],
+    "kunyomi": [],
+    "strokeCount": 7,
+    "radical": "手",
+    "radicalName": null,
+    "jlptLevel": null,
+    "grade": null,
+    "frequencyRank": null,
+    "commonCompounds": [
+      "把握"
+    ],
+    "tags": [
+      "dev-seed",
+      "phase4-reviewed"
+    ]
+  },
+  {
+    "id": "握",
+    "datasetVersion": "0.1.0-dev.2",
+    "character": "握",
+    "meanings": {
+      "vi": [
+        "nắm chặt"
+      ],
+      "en": [
+        "grip; grasp"
+      ]
+    },
+    "onyomi": [
+      "アク"
+    ],
+    "kunyomi": [
+      "にぎ.る"
+    ],
+    "strokeCount": 12,
+    "radical": "手",
+    "radicalName": null,
+    "jlptLevel": "N1",
+    "grade": null,
+    "frequencyRank": null,
+    "commonCompounds": [
+      "把握"
+    ],
+    "tags": [
+      "dev-seed",
+      "phase4-reviewed"
+    ]
+  },
+  {
+    "id": "検",
+    "datasetVersion": "0.1.0-dev.2",
+    "character": "検",
+    "meanings": {
+      "vi": [
+        "kiểm tra; xem xét"
+      ],
+      "en": [
+        "examine; inspect"
+      ]
+    },
+    "onyomi": [
+      "ケン"
+    ],
+    "kunyomi": [],
+    "strokeCount": 12,
+    "radical": "木",
+    "radicalName": null,
+    "jlptLevel": "N2",
+    "grade": null,
+    "frequencyRank": null,
+    "commonCompounds": [
+      "検討"
+    ],
+    "tags": [
+      "dev-seed",
+      "phase4-reviewed"
+    ]
+  },
+  {
+    "id": "討",
+    "datasetVersion": "0.1.0-dev.2",
+    "character": "討",
+    "meanings": {
+      "vi": [
+        "thảo luận; xem xét"
+      ],
+      "en": [
+        "discuss; examine"
+      ]
+    },
+    "onyomi": [
+      "トウ"
+    ],
+    "kunyomi": [
+      "う.つ"
+    ],
+    "strokeCount": 10,
+    "radical": "言",
+    "radicalName": null,
+    "jlptLevel": "N2",
+    "grade": null,
+    "frequencyRank": null,
+    "commonCompounds": [
+      "検討"
+    ],
+    "tags": [
+      "dev-seed",
+      "phase4-reviewed"
+    ]
+  },
+  {
+    "id": "促",
+    "datasetVersion": "0.1.0-dev.2",
+    "character": "促",
+    "meanings": {
+      "vi": [
+        "thúc đẩy; giục"
+      ],
+      "en": [
+        "urge; promote"
+      ]
+    },
+    "onyomi": [
+      "ソク"
+    ],
+    "kunyomi": [
+      "うなが.す"
+    ],
+    "strokeCount": 9,
+    "radical": "人",
+    "radicalName": null,
+    "jlptLevel": "N2",
+    "grade": null,
+    "frequencyRank": null,
+    "commonCompounds": [
+      "促進"
+    ],
+    "tags": [
+      "dev-seed",
+      "phase4-reviewed"
+    ]
+  },
+  {
+    "id": "進",
+    "datasetVersion": "0.1.0-dev.2",
+    "character": "進",
+    "meanings": {
+      "vi": [
+        "tiến lên; tiến độ"
+      ],
+      "en": [
+        "advance; progress"
+      ]
+    },
+    "onyomi": [
+      "シン"
+    ],
+    "kunyomi": [
+      "すす.む",
+      "すす.める"
+    ],
+    "strokeCount": 11,
+    "radical": "辶",
+    "radicalName": null,
+    "jlptLevel": "N3",
+    "grade": null,
+    "frequencyRank": null,
+    "commonCompounds": [
+      "促進",
+      "進捗"
+    ],
+    "tags": [
+      "dev-seed",
+      "phase4-reviewed"
+    ]
+  },
+  {
+    "id": "捗",
+    "datasetVersion": "0.1.0-dev.2",
+    "character": "捗",
+    "meanings": {
+      "vi": [
+        "tiến triển"
+      ],
+      "en": [
+        "make progress"
+      ]
+    },
+    "onyomi": [
+      "チョク"
+    ],
+    "kunyomi": [
+      "はかど.る"
+    ],
+    "strokeCount": 11,
+    "radical": "手",
+    "radicalName": null,
+    "jlptLevel": null,
+    "grade": null,
+    "frequencyRank": null,
+    "commonCompounds": [
+      "進捗"
+    ],
+    "tags": [
+      "dev-seed",
+      "phase4-reviewed"
+    ]
+  },
+  {
+    "id": "省",
+    "datasetVersion": "0.1.0-dev.2",
+    "character": "省",
+    "meanings": {
+      "vi": [
+        "tỉnh; lược bỏ"
+      ],
+      "en": [
+        "省; omit"
+      ]
+    },
+    "onyomi": [
+      "セイ",
+      "ショウ"
+    ],
+    "kunyomi": [
+      "かえり.みる",
+      "はぶ.く"
+    ],
+    "strokeCount": 9,
+    "radical": "目",
+    "radicalName": null,
+    "jlptLevel": "N2",
+    "grade": null,
+    "frequencyRank": null,
+    "commonCompounds": [
+      "省略"
+    ],
+    "tags": [
+      "dev-seed",
+      "phase4-reviewed"
+    ]
+  }
+]

@@ -1,0 +1,417 @@
+[
+  {
+    "id": "ex-japanese",
+    "datasetVersion": "0.1.0-dev.2",
+    "japanese": "私は日本語を勉強しています。",
+    "reading": "わたしはにほんごをべんきょうしています。",
+    "translationVi": "Tôi đang học tiếng Nhật.",
+    "translationEn": "I am studying Japanese.",
+    "source": null,
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "ex-school",
+    "datasetVersion": "0.1.0-dev.2",
+    "japanese": "学校は九時に始まります。",
+    "reading": "がっこうはくじにはじまります。",
+    "translationVi": "Trường học bắt đầu lúc chín giờ.",
+    "translationEn": "School starts at nine.",
+    "source": null,
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "ex-study",
+    "datasetVersion": "0.1.0-dev.2",
+    "japanese": "毎日少しずつ勉強しています。",
+    "reading": "まいにちすこしずつべんきょうしています。",
+    "translationVi": "Tôi học từng chút một mỗi ngày.",
+    "translationEn": "I study a little every day.",
+    "source": null,
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "ex-eat",
+    "datasetVersion": "0.1.0-dev.2",
+    "japanese": "朝ご飯を食べます。",
+    "reading": "あさごはんをたべます。",
+    "translationVi": "Tôi ăn sáng.",
+    "translationEn": "I eat breakfast.",
+    "source": null,
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "ex-influence",
+    "datasetVersion": "0.1.0-dev.2",
+    "japanese": "天気は気分に影響します。",
+    "reading": "てんきはきぶんにえいきょうします。",
+    "translationVi": "Thời tiết ảnh hưởng đến tâm trạng.",
+    "translationEn": "The weather affects my mood.",
+    "source": null,
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "ex-pay",
+    "datasetVersion": "0.1.0-dev.2",
+    "japanese": "カードで支払いました。",
+    "reading": "カードでしはらいました。",
+    "translationVi": "Tôi đã thanh toán bằng thẻ.",
+    "translationEn": "I paid by card.",
+    "source": null,
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "ex-rise",
+    "datasetVersion": "0.1.0-dev.2",
+    "japanese": "気温が上昇しています。",
+    "reading": "きおんがじょうしょうしています。",
+    "translationVi": "Nhiệt độ đang tăng lên.",
+    "translationEn": "The temperature is rising.",
+    "source": null,
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "ex-read",
+    "datasetVersion": "0.1.0-dev.2",
+    "japanese": "週末は本を読んでいます。",
+    "reading": "しゅうまつはほんをよんでいます。",
+    "translationVi": "Cuối tuần tôi đọc sách.",
+    "translationEn": "I read books on weekends.",
+    "source": null,
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "ex-response",
+    "datasetVersion": "0.1.0-dev.2",
+    "japanese": "質問にすぐ対応しました。",
+    "reading": "しつもんにすぐたいおうしました。",
+    "translationVi": "Tôi đã xử lý câu hỏi ngay lập tức.",
+    "translationEn": "I responded to the question right away.",
+    "source": null,
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "ex-comprehension",
+    "datasetVersion": "0.1.0-dev.2",
+    "japanese": "この文章は読解しやすいです。",
+    "reading": "このぶんしょうはどっかいしやすいです。",
+    "translationVi": "Bài văn này dễ đọc hiểu.",
+    "translationEn": "This passage is easy to understand.",
+    "source": null,
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "ex-desu",
+    "datasetVersion": "0.1.0-dev.2",
+    "japanese": "日本語はおもしろいです。",
+    "reading": "にほんごはおもしろいです。",
+    "translationVi": "Tiếng Nhật thú vị.",
+    "translationEn": "Japanese is interesting.",
+    "source": null,
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "ex-experience",
+    "datasetVersion": "0.1.0-dev.2",
+    "japanese": "日本へ行ったことがあります。",
+    "reading": "にほんへいったことがあります。",
+    "translationVi": "Tôi đã từng đến Nhật Bản.",
+    "translationEn": "I have been to Japan.",
+    "source": null,
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "ex-nagara",
+    "datasetVersion": "0.1.0-dev.2",
+    "japanese": "音楽を聞きながら本を読みます。",
+    "reading": "おんがくをききながらほんをよみます。",
+    "translationVi": "Tôi vừa nghe nhạc vừa đọc sách.",
+    "translationEn": "I read a book while listening to music.",
+    "source": null,
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "ex-review",
+    "datasetVersion": "0.1.0-dev.2",
+    "japanese": "毎日漢字を復習するようにしています。",
+    "reading": "まいにちかんじをふくしゅうするようにしています。",
+    "translationVi": "Tôi cố gắng ôn chữ Hán mỗi ngày.",
+    "translationEn": "I make a point of reviewing kanji every day.",
+    "source": null,
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "ex-not-necessarily",
+    "datasetVersion": "0.1.0-dev.2",
+    "japanese": "日本語が難しいわけではありません。",
+    "reading": "にほんごがむずかしいわけではありません。",
+    "translationVi": "Không hẳn là tiếng Nhật khó.",
+    "translationEn": "It is not necessarily the case that Japanese is difficult.",
+    "source": null,
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "ex-推薦",
+    "datasetVersion": "0.1.0-dev.2",
+    "japanese": "先生にこの本を推薦されました。",
+    "reading": "せんせいにこのほんをすいせんされました。",
+    "translationVi": "Thầy/cô đã giới thiệu quyển sách này cho tôi.",
+    "translationEn": "My teacher recommended this book to me.",
+    "source": null,
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "ex-推奨",
+    "datasetVersion": "0.1.0-dev.2",
+    "japanese": "このアプリは最新版の使用を推奨しています。",
+    "reading": "このアプリはさいしんばんのしようをすいしょうしています。",
+    "translationVi": "Ứng dụng này khuyến nghị sử dụng phiên bản mới nhất.",
+    "translationEn": "This app recommends using the latest version.",
+    "source": null,
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "ex-改善",
+    "datasetVersion": "0.1.0-dev.2",
+    "japanese": "方法を改善する必要があります。",
+    "reading": "ほうほうをかいぜんするひつようがあります。",
+    "translationVi": "Cần cải thiện phương pháp.",
+    "translationEn": "We need to improve the method.",
+    "source": null,
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "ex-影響",
+    "datasetVersion": "0.1.0-dev.2",
+    "japanese": "睡眠不足は健康に影響します。",
+    "reading": "すいみんぶそくはけんこうにえいきょうします。",
+    "translationVi": "Thiếu ngủ ảnh hưởng đến sức khỏe.",
+    "translationEn": "Lack of sleep affects your health.",
+    "source": null,
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "ex-省略",
+    "datasetVersion": "0.1.0-dev.2",
+    "japanese": "説明の一部を省略しました。",
+    "reading": "せつめいのいちぶをしょうりゃくしました。",
+    "translationVi": "Tôi đã lược bỏ một phần lời giải thích.",
+    "translationEn": "I omitted part of the explanation.",
+    "source": null,
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "ex-把握",
+    "datasetVersion": "0.1.0-dev.2",
+    "japanese": "状況を正確に把握しています。",
+    "reading": "じょうきょうをせいかくにはあくしています。",
+    "translationVi": "Tôi đang nắm rõ tình hình một cách chính xác.",
+    "translationEn": "I understand the situation accurately.",
+    "source": null,
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "ex-検討",
+    "datasetVersion": "0.1.0-dev.2",
+    "japanese": "提案を検討しています。",
+    "reading": "ていあんをけんとうしています。",
+    "translationVi": "Chúng tôi đang xem xét đề xuất.",
+    "translationEn": "We are considering the proposal.",
+    "source": null,
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "ex-対応",
+    "datasetVersion": "0.1.0-dev.2",
+    "japanese": "問い合わせに対応しました。",
+    "reading": "といあわせにたいおうしました。",
+    "translationVi": "Tôi đã xử lý yêu cầu hỏi đáp.",
+    "translationEn": "I handled the inquiry.",
+    "source": null,
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "ex-促進",
+    "datasetVersion": "0.1.0-dev.2",
+    "japanese": "新しい制度が交流を促進します。",
+    "reading": "あたらしいせいどがこうりゅうをそくしんします。",
+    "translationVi": "Chế độ mới thúc đẩy giao lưu.",
+    "translationEn": "The new system promotes interaction.",
+    "source": null,
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "ex-進捗",
+    "datasetVersion": "0.1.0-dev.2",
+    "japanese": "プロジェクトの進捗を確認します。",
+    "reading": "プロジェクトのしんちょくをかくにんします。",
+    "translationVi": "Tôi kiểm tra tiến độ dự án.",
+    "translationEn": "I will check the project's progress.",
+    "source": null,
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "ex-上昇",
+    "datasetVersion": "0.1.0-dev.2",
+    "japanese": "気温が上昇しています。",
+    "reading": "きおんがじょうしょうしています。",
+    "translationVi": "Nhiệt độ đang tăng lên.",
+    "translationEn": "The temperature is rising.",
+    "source": null,
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "ex-読解",
+    "datasetVersion": "0.1.0-dev.2",
+    "japanese": "読解の練習を続けています。",
+    "reading": "どっかいのれんしゅうをつづけています。",
+    "translationVi": "Tôi tiếp tục luyện đọc hiểu.",
+    "translationEn": "I am continuing to practice reading comprehension.",
+    "source": null,
+    "tags": [
+      "dev-seed"
+    ]
+  },
+  {
+    "id": "ex-grammar-naide",
+    "datasetVersion": "0.1.0-dev.2",
+    "japanese": "ここで写真を撮らないでください。",
+    "reading": "ここでしゃしんをとらないでください。",
+    "translationVi": "Xin đừng chụp ảnh ở đây.",
+    "translationEn": "Please do not take photos here.",
+    "source": null,
+    "tags": [
+      "dev-seed",
+      "phase4-reviewed"
+    ]
+  },
+  {
+    "id": "ex-grammar-shimau",
+    "datasetVersion": "0.1.0-dev.2",
+    "japanese": "財布を家に忘れてしまいました。",
+    "reading": "さいふをいえにわすれてしまいました。",
+    "translationVi": "Tôi lỡ quên ví ở nhà mất rồi.",
+    "translationEn": "I accidentally left my wallet at home.",
+    "source": null,
+    "tags": [
+      "dev-seed",
+      "phase4-reviewed"
+    ]
+  },
+  {
+    "id": "ex-grammar-kotonisuru",
+    "datasetVersion": "0.1.0-dev.2",
+    "japanese": "毎朝、漢字を五つ覚えることにしました。",
+    "reading": "まいあさ、かんじをいつつおぼえることにしました。",
+    "translationVi": "Tôi đã quyết định học thuộc năm chữ Hán mỗi sáng.",
+    "translationEn": "I decided to learn five kanji every morning.",
+    "source": null,
+    "tags": [
+      "dev-seed",
+      "phase4-reviewed"
+    ]
+  },
+  {
+    "id": "ex-grammar-ni-chigainai",
+    "datasetVersion": "0.1.0-dev.2",
+    "japanese": "彼はもう駅に着いたに違いありません。",
+    "reading": "かれはもうえきについたにちがいありません。",
+    "translationVi": "Chắc hẳn anh ấy đã đến ga rồi.",
+    "translationEn": "He must have arrived at the station already.",
+    "source": null,
+    "tags": [
+      "dev-seed",
+      "phase4-reviewed"
+    ]
+  },
+  {
+    "id": "ex-grammar-nimokakawarazu",
+    "datasetVersion": "0.1.0-dev.2",
+    "japanese": "雨にもかかわらず、多くの人が集まりました。",
+    "reading": "あめにもかかわらず、おおくのひとがあつまりました。",
+    "translationVi": "Mặc dù trời mưa, nhiều người vẫn đã tập trung.",
+    "translationEn": "Despite the rain, many people gathered.",
+    "source": null,
+    "tags": [
+      "dev-seed",
+      "phase4-reviewed"
+    ]
+  },
+  {
+    "id": "ex-grammar-wake-ni-wa-ikanai",
+    "datasetVersion": "0.1.0-dev.2",
+    "japanese": "今日は大事な会議があるので、休むわけにはいきません。",
+    "reading": "きょうはだいじなかいぎがあるので、やすむわけにはいきません。",
+    "translationVi": "Hôm nay có cuộc họp quan trọng nên tôi không thể nghỉ.",
+    "translationEn": "I cannot take the day off because there is an important meeting today.",
+    "source": null,
+    "tags": [
+      "dev-seed",
+      "phase4-reviewed"
+    ]
+  },
+  {
+    "id": "ex-grammar-kinjienai",
+    "datasetVersion": "0.1.0-dev.2",
+    "japanese": "彼女の努力に感動を禁じ得ませんでした。",
+    "reading": "かのじょのどりょくにかんどうをきんじえませんでした。",
+    "translationVi": "Tôi không thể kìm nén sự xúc động trước nỗ lực của cô ấy.",
+    "translationEn": "I could not help feeling moved by her effort.",
+    "source": null,
+    "tags": [
+      "dev-seed",
+      "phase4-reviewed"
+    ]
+  }
+]

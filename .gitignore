@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.npm-cache/
+*.log
+.visual-qa-profile*/
+.visual-qa-cdp-profile*/
+.chrome-profile*/
+.playwright*/
+.env
+.env.*
+!.env.example
+*.sqlite
+*.sqlite3
+*.db

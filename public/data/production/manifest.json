@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 2,
+  "pipelineVersion": 2,
+  "transportVersion": 2,
+  "sourceFingerprint": "01681afd6e0ad4c67c8f435e7bd966c8173f676e26ef6d6f73f656dec1fe4a2f",
+  "datasetVersion": "2026-09-29.014928",
+  "generatedAt": "2026-09-29T01:49:28.530Z",
+  "basePath": "versions/2026-09-29.014928/",
+  "counts": {
+    "dictionary": 219230,
+    "kanji": 2211,
+    "grammar": 99,
+    "examples": 392
+  },
+  "jlptCounts": {
+    "N5": {
+      "vocabulary": 658,
+      "kanji": 79,
+      "grammar": 20
+    },
+    "N4": {
+      "vocabulary": 632,
+      "kanji": 166,
+      "grammar": 20
+    },
+    "N3": {
+      "vocabulary": 1777,
+      "kanji": 367,
+      "grammar": 20
+    },
+    "N2": {
+      "vocabulary": 1778,
+      "kanji": 367,
+      "grammar": 20
+    },
+    "N1": {
+      "vocabulary": 3454,
+      "kanji": 1232,
+      "grammar": 20
+    }
+  },
+  "sourceCounts": {
+    "N5": {
+      "vocabulary": 662,
+      "kanji": 79,
+      "grammar": 20
+    },
+    "N4": {
+      "vocabulary": 632,
+      "kanji": 166,
+      "grammar": 20
+    },
+    "N3": {
+      "vocabulary": 1784,
+      "kanji": 367,
+      "grammar": 20
+    },
+    "N2": {
+      "vocabulary": 1793,
+      "kanji": 367,
+      "grammar": 20
+    },
+    "N1": {
+      "vocabulary": 3463,
+      "kanji": 1232,
+      "grammar": 20
+    }
+  },
+  "assignmentCounts": {
+    "N5": {
+      "vocabulary": 662,
+      "kanji": 79,
+      "grammar": 20
+    },
+    "N4": {
+      "vocabulary": 632,
+      "kanji": 166,
+      "grammar": 20
+    },
+    "N3": {
+      "vocabulary": 1784,
+      "kanji": 367,
+      "grammar": 20
+    },
+    "N2": {
+      "vocabulary": 1793,
+      "kanji": 367,
+      "grammar": 20
+    },
+    "N1": {
+      "vocabulary": 3463,
+      "kanji": 1232,
+      "grammar": 20
+    }
+  },
+  "recordBuckets": {
+    "dictionary": 1024,
+    "kanji": 16,
+    "grammar": 4,
+    "examples": 8
+  },
+  "indexBuckets": 1024,
+  "jlptPageSize": 100,
+  "sources": [
+    "openjlpt",
+    "jmdict",
+    "kanjidic2",
+    "waller",
+    "tatoeba"
+  ],
+  "search": {
+    "format": "object-arrays-v1",
+    "sharding": "fnv1a-normalized-suffix-v1",
+    "postingLimit": 256,
+    "shardCount": 1024,
+    "averageBytes": 206078,
+    "medianBytes": 204935,
+    "largestBytes": 269519
+  }
+}

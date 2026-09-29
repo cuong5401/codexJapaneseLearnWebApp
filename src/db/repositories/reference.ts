@@ -1,6 +1,6 @@
 import Dexie from 'dexie'
 import { db } from '../database'
-import type { DictionaryEntry, GrammarEntry, JlptLevel, KanjiEntry } from '../../types/domain'
+import type { DictionaryEntry, ExampleSentence, GrammarEntry, JlptLevel, KanjiEntry } from '../../types/domain'
 import { normalizeJapanese } from '../../lib/japanese-normalization'
 import { buildGrammarSearchText, kanjiSearchPrefixes } from '../../lib/content-index'
 import { normalizeSearchInput, normalizeVietnamese } from '../../lib/search-normalization'
@@ -20,6 +20,9 @@ export class DictionaryRepository {
     const limit = boundedLimit(options.limit ?? 50); const offset = boundedOffset(options.offset ?? 0); const version = await activeDatasetVersion()
     const items = version ? await db.dictionaryEntries.where('[datasetVersion+jlptLevel]').equals([version, level]).offset(offset).limit(limit).toArray() : []
     return { items, limit, offset }
+  }
+  async countByJlptLevel(level: JlptLevel): Promise<number> {
+    const version = await activeDatasetVersion(); return version ? db.dictionaryEntries.where('[datasetVersion+jlptLevel]').equals([version, level]).count() : 0
   }
   async getPrefix(prefix: string, options: { limit?: number } = {}): Promise<DictionaryEntry[]> {
     const limit = boundedLimit(options.limit ?? 50); const version = await activeDatasetVersion(); if (!version) return []
@@ -46,6 +49,9 @@ export class KanjiRepository {
     const limit = boundedLimit(options.limit ?? 50); const offset = boundedOffset(options.offset ?? 0); const version = await activeDatasetVersion()
     const items = version ? await db.kanjiEntries.where('[datasetVersion+jlptLevel]').equals([version, level]).offset(offset).limit(limit).toArray() : []
     return { items, limit, offset }
+  }
+  async countByJlptLevel(level: JlptLevel): Promise<number> {
+    const version = await activeDatasetVersion(); return version ? db.kanjiEntries.where('[datasetVersion+jlptLevel]').equals([version, level]).count() : 0
   }
   async search(query = '', options: { jlptLevel?: JlptLevel | null; limit?: number; offset?: number } = {}) {
     const limit = boundedLimit(options.limit ?? 50); const offset = boundedOffset(options.offset ?? 0); const version = await activeDatasetVersion()
@@ -91,6 +97,9 @@ export class GrammarRepository {
     const items = version ? await db.grammarEntries.where('[datasetVersion+jlptLevel]').equals([version, level]).offset(offset).limit(limit).toArray() : []
     return { items, limit, offset }
   }
+  async countByJlptLevel(level: JlptLevel): Promise<number> {
+    const version = await activeDatasetVersion(); return version ? db.grammarEntries.where('[datasetVersion+jlptLevel]').equals([version, level]).count() : 0
+  }
   async search(query = '', options: { jlptLevel?: JlptLevel | null; limit?: number; offset?: number } = {}) {
     const limit = boundedLimit(options.limit ?? 50); const offset = boundedOffset(options.offset ?? 0); const version = await activeDatasetVersion()
     if (!version) return { items: [] as GrammarEntry[], limit, offset, total: 0, hasMore: false, truncated: false }
@@ -115,5 +124,16 @@ export class GrammarRepository {
   }
   async count(): Promise<number> {
     const version = await activeDatasetVersion(); return version ? db.grammarEntries.where('[datasetVersion+id]').between([version, Dexie.minKey], [version, Dexie.maxKey]).count() : 0
+  }
+}
+
+export class ExampleSentenceRepository {
+  async getByIds(ids: string[], options: { limit?: number } = {}): Promise<ExampleSentence[]> {
+    const limit = boundedLimit(options.limit ?? 50)
+    const version = await activeDatasetVersion()
+    if (!version || !ids.length) return []
+    const uniqueIds = [...new Set(ids)].slice(0, limit)
+    const rows = await db.exampleSentences.bulkGet(uniqueIds.map((id) => [version, id]))
+    return rows.filter((row): row is ExampleSentence => !!row)
   }
 }

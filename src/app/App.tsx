@@ -9,7 +9,7 @@ export function App() {
     if (!import.meta.env.DEV) return
     void Promise.all([import('../db/initialization'), import('../db/diagnostics/dev-tools')]).then(([initialization, diagnostics]) => {
       diagnostics.registerDevelopmentTools()
-      void initialization.initializeDevelopmentData()
+      if (import.meta.env.VITE_REFERENCE_SOURCE !== 'static') void initialization.initializeDevelopmentData()
     })
   }, [])
   return <ThemeProvider><TooltipProvider><RouterProvider router={router} /></TooltipProvider></ThemeProvider>

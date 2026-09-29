@@ -2,6 +2,7 @@ import { db, ACTIVE_DATASET_KEY, openKotobaDatabase } from './database'
 import { importDataset, loadBundledChunk, loadBundledManifest } from './import/importer'
 import type { ImportProgress } from './import/progress'
 import { compareDatasetVersions } from './import/dataset-version'
+import { usesStaticReferenceData } from './sources/reference-source'
 
 export interface InitializationState { status: 'idle' | 'initializing' | 'ready' | 'failed'; progress: ImportProgress | null; error: string | null }
 let initializationState: InitializationState = { status: 'idle', progress: null, error: null }
@@ -36,10 +37,10 @@ export function initializeDevelopmentData(): Promise<InitializationState> {
   return initializationPromise
 }
 
-/** Waits for the current bundled reference dataset before a content route queries it. */
+/** Opens user storage. Only seed-mode development imports reference data into IndexedDB. */
 export async function ensureLocalDatasetReady(): Promise<void> {
   await openKotobaDatabase()
-  if (!import.meta.env.DEV) return
+  if (usesStaticReferenceData) return
   const state = await initializeDevelopmentData()
   if (state.status !== 'ready') throw new Error(state.error ?? 'The offline development dataset could not be initialized.')
 }

@@ -8,6 +8,7 @@ import dictionaryAsset from '../../public/data/dictionary/dictionary-0001.json'
 import kanjiAsset from '../../public/data/kanji/kanji-0001.json'
 import grammarAsset from '../../public/data/grammar/grammar-0001.json'
 import examplesAsset from '../../public/data/examples/examples-0001.json'
+import { indexedDbReferenceSource } from './sources/reference-source'
 
 const kanji = new KanjiRepository()
 const grammar = new GrammarRepository()
@@ -82,5 +83,12 @@ describe('offline content browsing', () => {
     const word = await dictionary.getByExactWord('推薦')
     expect(word?.exampleSentenceIds).toContain('ex-推薦')
     expect(await dictionary.getById('invalid-word-id')).toBeUndefined()
+  })
+
+  it('loads example sentences through the reference-source boundary with a bounded result', async () => {
+    await importContent()
+    const rows = await indexedDbReferenceSource.examples.getByIds(['ex-改善', 'ex-推薦', 'missing'], { limit: 2 })
+    expect(rows).toHaveLength(2)
+    expect(rows.map((row) => row.id)).toEqual(['ex-改善', 'ex-推薦'])
   })
 })

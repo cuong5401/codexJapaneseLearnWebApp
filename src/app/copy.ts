@@ -27,6 +27,7 @@ export const uiCopy = {
   navigation: {
     home: 'Home',
     dictionary: 'Dictionary',
+    myVocabulary: 'My Vocabulary',
     kanji: 'Kanji',
     grammar: 'Grammar',
     reading: 'Reading',
@@ -50,7 +51,7 @@ export const uiCopy = {
     aboutDescription: 'Kotoba keeps your future study tools focused and local-first.',
     application: 'Application',
     currentPhase: 'Current phase',
-    currentPhaseValue: 'Dictionary, kanji, and grammar',
+    currentPhaseValue: 'Dictionary, kanji, grammar, and review',
   },
   home: {
     reviewEyebrow: 'READY WHEN YOU ARE',

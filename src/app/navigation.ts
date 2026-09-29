@@ -1,16 +1,17 @@
 import {
-  BookOpen, BookText, ChartNoAxesColumnIncreasing, FileText, GraduationCap,
+  BookOpen, BookText, BookmarkCheck, ChartNoAxesColumnIncreasing, FileText, GraduationCap,
   House, Languages, NotebookPen, RotateCcw, Settings2,
 } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 import { uiCopy } from './copy'
 
-export type SectionId = 'home' | 'dictionary' | 'kanji' | 'grammar' | 'reading' | 'review' | 'jlpt' | 'notebook' | 'progress' | 'settings'
+export type SectionId = 'home' | 'dictionary' | 'myVocabulary' | 'kanji' | 'grammar' | 'reading' | 'review' | 'jlpt' | 'notebook' | 'progress' | 'settings'
 export type NavigationItem = { id: SectionId; label: string; path: string; icon: LucideIcon }
 
 export const mainNavigation: NavigationItem[] = [
   { id: 'home', label: uiCopy.navigation.home, path: '/', icon: House },
   { id: 'dictionary', label: uiCopy.navigation.dictionary, path: '/dictionary', icon: Languages },
+  { id: 'myVocabulary', label: uiCopy.navigation.myVocabulary, path: '/my-vocabulary', icon: BookmarkCheck },
   { id: 'kanji', label: uiCopy.navigation.kanji, path: '/kanji', icon: BookOpen },
   { id: 'grammar', label: uiCopy.navigation.grammar, path: '/grammar', icon: BookText },
   { id: 'reading', label: uiCopy.navigation.reading, path: '/reading', icon: FileText },
@@ -24,6 +25,7 @@ export const settingsNavigation: NavigationItem = { id: 'settings', label: uiCop
 
 export const sectionDetails: Record<Exclude<SectionId, 'home' | 'settings'>, { title: string; description: string }> = {
   dictionary: { title: 'Dictionary', description: 'Look up vocabulary, readings, and meanings.' },
+  myVocabulary: { title: 'My Vocabulary', description: 'Collect and organize the words you want to learn.' },
   kanji: { title: 'Kanji', description: 'Study characters, readings, and meanings.' },
   grammar: { title: 'Grammar', description: 'Explore Japanese grammar patterns.' },
   reading: { title: 'Reading', description: 'Practice with Japanese texts.' },

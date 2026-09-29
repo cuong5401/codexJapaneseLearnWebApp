@@ -7,6 +7,7 @@ import Dexie from 'dexie'
 import { normalizedMeanings } from '../../lib/search-normalization'
 import { buildDictionarySearchIndexRecord } from '../../lib/meaning-index'
 import { buildDictionaryKanjiLookupKeys, buildKanjiSearchKeys } from '../../lib/content-index'
+import { staticAssetUrl } from '../../lib/static-asset-url'
 
 export const DATASET_SCHEMA_VERSION = 1
 export type ChunkLoader = (path: string) => Promise<unknown>
@@ -144,11 +145,12 @@ export async function importDataset(input: unknown, loadChunk: ChunkLoader, onPr
 }
 
 export async function loadBundledManifest(): Promise<unknown> {
-  try { const response = await fetch('/data/manifest.json'); if (!response.ok) throw new Error(`HTTP ${response.status}`); return await response.json() }
+  try { const response = await fetch(staticAssetUrl('data/manifest.json')); if (!response.ok) throw new Error(`HTTP ${response.status}`); return await response.json() }
   catch (error) { throw new DataLayerError('chunk-read-failed', 'Could not read the bundled dataset manifest.', error) }
 }
 export async function loadBundledChunk(path: string): Promise<unknown> {
-  const response = await fetch(path.startsWith('/') ? path : `/${path}`)
+  const normalizedPath = path.split('/').filter(Boolean).join('/')
+  const response = await fetch(staticAssetUrl(normalizedPath.startsWith('data/') ? normalizedPath : `data/${normalizedPath}`))
   if (!response.ok) throw new Error(`HTTP ${response.status} while reading ${path}`)
   return response.json()
 }

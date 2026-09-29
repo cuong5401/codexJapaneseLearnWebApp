@@ -1,0 +1,87 @@
+{
+  "sourceDatasetVersion": "2026-09-29.001627",
+  "queries": [
+    {
+      "query": "推薦",
+      "ids": [
+        "jmdict:1371170",
+        "jmdict:1371180",
+        "jmdict:1371190",
+        "jmdict:2059190",
+        "jmdict:2246050",
+        "jmdict:2713710",
+        "jmdict:2847343",
+        "jmdict:2847344"
+      ]
+    },
+    {
+      "query": "推奨",
+      "ids": [
+        "jmdict:1371120",
+        "jmdict:1371130",
+        "jmdict:1995930",
+        "jmdict:2127730",
+        "jmdict:2406800",
+        "jmdict:2561290",
+        "jmdict:2563920",
+        "jmdict:2564090"
+      ]
+    },
+    {
+      "query": "改善",
+      "ids": [
+        "jmdict:1200960",
+        "jmdict:2039040",
+        "jmdict:2835870",
+        "jmdict:2851818"
+      ]
+    },
+    {
+      "query": "省略",
+      "ids": [
+        "jmdict:1351120",
+        "jmdict:1351130",
+        "jmdict:1351140",
+        "jmdict:2068020",
+        "jmdict:2365260",
+        "jmdict:2365270",
+        "jmdict:2365280",
+        "jmdict:2365290"
+      ]
+    },
+    {
+      "query": "読解",
+      "ids": [
+        "jmdict:1456370",
+        "jmdict:1898570",
+        "jmdict:2393540"
+      ]
+    },
+    {
+      "query": "食べる",
+      "ids": [
+        "jmdict:1358280",
+        "jmdict:2847337"
+      ]
+    },
+    {
+      "query": "雨宿り",
+      "ids": [
+        "jmdict:1172040"
+      ]
+    },
+    {
+      "query": "recommend",
+      "ids": [
+        "jmdict:1002150",
+        "jmdict:1132440",
+        "jmdict:1141300",
+        "jmdict:1153410",
+        "jmdict:1210900",
+        "jmdict:1210970",
+        "jmdict:1210980",
+        "jmdict:1229390"
+      ]
+    }
+  ]
+}

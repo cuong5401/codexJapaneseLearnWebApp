@@ -16,6 +16,13 @@ import examplesAsset from '../../public/data/examples/examples-0001.json'
 import { vi } from 'vitest'
 import { NotebookRepository, SearchHistoryRepository, SettingsRepository, StudyRepository } from './repositories/user-data'
 import { clearReferenceDataset, clearUserData, getDatabaseDiagnostics, resetDevelopmentDatabase } from './diagnostics/dev-tools'
+import { CustomWordRepository } from './repositories/custom-words'
+import { OnlineLookupCacheRepository } from './repositories/online-lookup-cache'
+import { externalEntryToCustomWord } from './repositories/custom-words'
+import type { ExternalDictionaryEntry } from '../types/domain'
+import { configureReferenceDataSource, IndexedDbReferenceSource, indexedDbReferenceSource, referenceDataSource } from './sources/reference-source'
+import { staticAssetUrl } from '../lib/static-asset-url'
+import { ReadingDocumentRepository } from './repositories/reading-documents'
 
 const dictionary = new DictionaryRepository()
 const requiredJapaneseWords = [
@@ -72,8 +79,8 @@ describe('offline data layer', () => {
   it('keeps notebook membership idempotent and bounds saved history', async () => {
     const notebooks = new NotebookRepository()
     const notebook = await notebooks.create('Reading list')
-    await notebooks.addItem(notebook.id, 'word', 'seed-日本語')
-    await notebooks.addItem(notebook.id, 'word', 'seed-日本語')
+    await notebooks.addItem(notebook.id, 'custom-word', 'seed-日本語')
+    await notebooks.addItem(notebook.id, 'custom-word', 'seed-日本語')
     expect((await notebooks.listItems(notebook.id, 5)).items).toHaveLength(1)
     await expect(notebooks.listItems(notebook.id, 501)).rejects.toThrow(RangeError)
 
@@ -86,11 +93,77 @@ describe('offline data layer', () => {
 
   it('persists study state and settings outside reference data', async () => {
     const study = new StudyRepository()
-    await study.save({ id: 'word:seed-日本語', itemType: 'word', itemId: 'seed-日本語', status: 'learning', firstSeenAt: 1, lastSeenAt: 2, updatedAt: 2 })
+    await study.save({ id: 'custom-word:seed-日本語', itemType: 'custom-word', itemId: 'seed-日本語', status: 'learning', firstSeenAt: 1, lastSeenAt: 2, updatedAt: 2 })
     const settings = new SettingsRepository()
     await settings.set('uiLanguage', 'vi')
-    expect((await study.get('word', 'seed-日本語'))?.status).toBe('learning')
+    expect((await study.get('custom-word', 'seed-日本語'))?.status).toBe('learning')
     expect((await settings.get('uiLanguage'))?.value).toBe('vi')
+  })
+
+  it('saves local Japanese reading documents and derives an empty title safely', async () => {
+    const repository = new ReadingDocumentRepository()
+    const passage = '私は図書館で本を読みました。'
+    const saved = await repository.save({ text: passage })
+    expect(saved).toMatchObject({ title: '私は図書館で本を読みました。', text: passage })
+    expect(await repository.get(saved.id)).toMatchObject({ text: passage, title: saved.title })
+    await repository.save({ id: saved.id, title: '図書館', text: '彼は本を読んだ。' })
+    expect(await repository.list()).toMatchObject([{ id: saved.id, title: '図書館', text: '彼は本を読んだ。', createdAt: saved.createdAt }])
+    await repository.delete(saved.id)
+    expect(await repository.get(saved.id)).toBeUndefined()
+  })
+
+  it('persists editable custom words and converts normalized external results', async () => {
+    const repository = new CustomWordRepository()
+    const external: ExternalDictionaryEntry = { word: '猫', reading: 'ねこ', meaningsVi: ['mèo'], meaningsEn: ['cat'], partsOfSpeech: ['noun'], examples: [], sourceProvider: 'candidate-provider', sourceUrl: 'https://example.test/cat' }
+    const converted = externalEntryToCustomWord(external, 100)
+    expect(converted).toMatchObject({ word: '猫', sourceType: 'online', sourceProvider: 'candidate-provider', createdAt: 100 })
+    const saved = await repository.create(converted)
+    await repository.update(saved.id, { meaningsVi: ['con mèo'], notes: 'pet' })
+    expect(await repository.findByWord('猫')).toMatchObject([{ id: saved.id, meaningsVi: ['con mèo'], notes: 'pet' }])
+    db.close()
+    await db.open()
+    expect(await repository.getById(saved.id)).toMatchObject({ word: '猫', meaningsVi: ['con mèo'] })
+    await repository.delete(saved.id)
+    expect(await repository.getById(saved.id)).toBeUndefined()
+  })
+
+  it('keeps custom words through reference cleanup and supports custom learning identity', async () => {
+    const custom = await new CustomWordRepository().create({ word: '猫', reading: 'ねこ', meaningsVi: ['mèo'], meaningsEn: ['cat'], partsOfSpeech: [], sourceType: 'manual' })
+    await importDataset(manifestFor('1.0.0-custom-persist', [0]), async () => [])
+    const notebook = await new NotebookRepository().create('Custom words')
+    await new NotebookRepository().addItem(notebook.id, 'custom-word', custom.id)
+    await new StudyRepository().save({ id: `custom-word:${custom.id}`, itemType: 'custom-word', itemId: custom.id, status: 'learning', firstSeenAt: 1, lastSeenAt: 1, updatedAt: 1 })
+    await clearReferenceDataset()
+    expect(await db.customWords.get(custom.id)).toMatchObject({ word: '猫' })
+    expect(await db.notebookItems.where('[itemType+itemId]').equals(['custom-word', custom.id]).count()).toBe(1)
+    expect(await db.studyStates.where('[itemType+itemId]').equals(['custom-word', custom.id]).count()).toBe(1)
+  })
+
+  it('expires online cache entries and keeps static source/index boundaries injectable', async () => {
+    const cache = new OnlineLookupCacheRepository()
+    const entry: ExternalDictionaryEntry = { word: '猫', reading: 'ねこ', meaningsVi: ['mèo'], meaningsEn: ['cat'], partsOfSpeech: [], examples: [], sourceProvider: 'provider' }
+    await cache.put(' Cat ', 'provider', [entry], 10, 100)
+    expect((await cache.get('cat', 'provider', 105))?.[0]?.word).toBe('猫')
+    expect(await cache.get('cat', 'provider', 111)).toBeUndefined()
+    const packSource = new IndexedDbReferenceSource('downloaded-pack')
+    configureReferenceDataSource(packSource)
+    expect(referenceDataSource.origin).toBe('downloaded-pack')
+    configureReferenceDataSource(indexedDbReferenceSource)
+    expect(staticAssetUrl('data/manifest.json', '/JapanLearnAppWeb/')).toBe('/JapanLearnAppWeb/data/manifest.json')
+    expect(staticAssetUrl('/data/manifest.json', '/')).toBe('/data/manifest.json')
+  })
+
+  it('bounds online lookup cache by least-recently-used access', async () => {
+    const cache = new OnlineLookupCacheRepository()
+    const records = Array.from({ length: 201 }, (_, index) => ({
+      id: `cache:${index}`, query: `${index}`, normalizedQuery: `${index}`, provider: 'cache', results: [],
+      fetchedAt: 1, expiresAt: 10_000, lastAccessedAt: index,
+    }))
+    await db.onlineLookupCache.bulkPut(records)
+    await cache.cleanup(100)
+    expect(await db.onlineLookupCache.count()).toBe(200)
+    expect(await db.onlineLookupCache.get('cache:0')).toBeUndefined()
+    expect(await db.onlineLookupCache.get('cache:200')).toBeDefined()
   })
 
   it('imports bundled development seed once and keeps it through a database reopen', async () => {
@@ -117,7 +190,7 @@ describe('offline data layer', () => {
     await expectRequiredSeedWords()
     expect((await db.datasetImports.get('0.1.0-dev.2:dictionary'))?.completedChunks).toEqual(['dictionary-0001'])
     const diagnostics = await getDatabaseDiagnostics()
-    expect(diagnostics).toMatchObject({ schemaVersion: 4, activeDatasetVersion: '0.1.0-dev.2', counts: { dictionary: 24, kanji: 33, grammar: 16, examples: 34 } })
+    expect(diagnostics).toMatchObject({ schemaVersion: 10, activeDatasetVersion: '0.1.0-dev.2', counts: { dictionary: 24, kanji: 33, grammar: 16, examples: 34 } })
 
     await db.notebooks.add({ id: 'preserved-user-data', name: 'Saved', createdAt: 1, updatedAt: 1, sortOrder: 1, isSystem: false })
     await clearUserData()

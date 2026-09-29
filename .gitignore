@@ -1,6 +1,7 @@
 node_modules/
 dist/
 .npm-cache/
+public/kuromoji/
 *.log
 .visual-qa-profile*/
 .visual-qa-cdp-profile*/
@@ -12,3 +13,4 @@ dist/
 *.sqlite
 *.sqlite3
 *.db
+data-sources/

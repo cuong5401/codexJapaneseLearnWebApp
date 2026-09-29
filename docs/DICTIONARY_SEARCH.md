@@ -1,35 +1,29 @@
-# Dictionary search (Phase 3)
+# Dictionary search
 
-## Persisted local index
+## Production data source
 
-Dictionary meaning search uses the Dexie `dictionarySearchTerms` table (schema version 3). It stores one compact search-index record per dictionary entry, keyed by `[datasetVersion+entryId]`. Each record contains deduplicated arrays for Vietnamese phrases/tokens and English phrases/tokens. The arrays are multi-entry IndexedDB indexes. Each indexed string is prefixed with its dataset version plus a separator, so queries can target the active version while a new version is staged.
+Production uses `StaticReferenceDataSource`. It reads the small current pointer at `data/production/manifest.json`, loads search shards on demand, then fetches only the record chunks needed for the visible result page. It never imports the full corpus into IndexedDB or scans all dictionary JSON.
 
-This is a compact postings layout: 20,000 dictionary entries produce 20,000 index records rather than one object per phrase/token. The record also stores the normalized term keys in four IndexedDB multi-entry indexes, which adds B-tree entries and increases import/storage cost. With the development generator, there are about 10–15 distinct phrase/token keys per entry across both languages (roughly 200,000–300,000 multi-entry keys for 20,000 records; roughly 1.5–2.25 million for 150,000). The exact count depends on the number and length of senses.
+The current index has 1,024 shards. FNV-1a hashes the normalized key suffix after its kind prefix, so related keys such as exact written form, reading and prefix for the same Japanese text share a shard. This reduces the number of index requests for a Japanese query without requiring a term-to-file directory. Each compact posting is `[stableIds, totalMatches]`, contains no dictionary payload, and is capped at 256 IDs. The manifest declares the sharding and transport versions.
 
-The table indexes `[datasetVersion+entryId]`, `datasetVersion`, `*viPhraseKeys`, `*viTokenKeys`, `*enPhraseKeys`, and `*enTokenKeys`. Search keys include the version prefix because a multi-entry index cannot be compounded with `datasetVersion`. This keeps staged versions isolated without scanning entries from other releases.
+Dictionary records use 1,024 stable-ID buckets of about 214 entries on average. A record chunk is around 80 KB raw on average (97 KB maximum) and compact tuples reconstruct the domain fields in the browser. Search shard raw sizes average 206 KB, with a 205 KB median and a 270 KB maximum. Per-category and compressed measurements are in [DATA_DELIVERY.md](DATA_DELIVERY.md).
 
-## Normalization and tokenization
+Japanese written forms and readings, normalized romaji candidates, English phrases/tokens, kanji reverse links, kanji readings/meanings and grammar terms use the same bounded posting interface. English and Vietnamese normalization stays in the search boundary; no Vietnamese gloss is invented. Search ranking remains exact written form, exact reading, romaji, prefixes, English phrase and bounded token matches. `scripts/data/regression/phase86-search-baseline.json` records the old release's ordered IDs for eight representative queries; the production-data test compares those results after transport changes.
 
-- All user input uses Unicode NFKC, lowercase, trim, and collapsed whitespace.
-- Japanese exact/prefix values continue to use `normalizedWord` and `normalizedReading`; katakana folds to hiragana. Common Hepburn input maps to kana for reading lookup.
-- Vietnamese phrase and token keys use lowercase, NFD, removal of combining marks, and `đ` to `d` folding. Original accented meanings remain in `DictionaryEntry` for display.
-- English phrases and tokens use Unicode NFKC, lowercase, and whitespace normalization. There is no stemming.
-- Tokenization uses Unicode letter/number runs, removes duplicates per entry, drops one-character fragments, and omits common Vietnamese/English stop words. Complete normalized phrases are always kept, including stop words, so exact phrase and phrase-prefix lookup remain available.
+## Result records and pages
 
-## Query and ranking
+Dictionary detail loads a stable ID through one record bucket and then loads linked examples if present. Prefix, exact and reverse-kanji searches use postings and fetch only result IDs. Candidate hydration is capped at 1,024 IDs and the visible search page at 120 entries.
 
-Meaning candidate lookup uses the multi-entry phrase/token indexes across the active dataset. It checks exact phrase, phrase prefix, and token prefix forms. Multiple query tokens intersect within each language. It then merges candidates with indexed Japanese exact/prefix/reading/romaji candidates, loads only bounded entry rows by compound primary key, and sorts them deterministically.
+JLPT list and quiz screens use canonical, materialized pages of 100 records rather than loading a full ID list and fanning out to dictionary buckets. The complete JLPT ID lists remain in the release for counts, assignments and progress. The current release preserves all N5–N1 record counts and assignments. Home renders six N5 example words from the first N5 page; other levels fetch their own requested page.
 
-Ranking prioritizes Japanese exact word, exact reading, romaji exact reading, word prefix, and reading prefix. Meaning results follow: Vietnamese exact phrase, phrase prefix, all-token exact, token prefix, then the equivalent English tiers. Common/frequency status and then word/ID stabilize ordering within a tier.
+The browser keeps an 8 MiB / 64-entry in-memory LRU and shares concurrent requests. Versioned release URLs are immutable; the small top-level manifest is revalidated and pins the active release for that store instance. Browser HTTP caching can then retain versioned JSON across reloads. See [DATA_PIPELINE.md](DATA_PIPELINE.md) for schemas and validation.
 
-The UI debounces by 180 ms, renders 30 results per page, and caps its retained list at 120. Each meaning posting query reads at most 256 index rows, and the combined entry candidate pool is capped at 800. A response sets `truncated` when those candidate limits are reached. These limits bound a very common token query; a broad term may need future cursor-backed pagination if complete traversal of extremely large posting lists becomes a product requirement. Unlike the old implementation, candidates are retrieved by the persisted meaning index across the active dataset, not by scanning an initial slice of dictionary entries. Arbitrary in-word substring search is not supported; exact phrase, phrase-prefix, token-exact, and token-prefix lookup are supported.
+## Development and personal data
 
-## Schema migration and import safety
+The small Phase 3 development seed and `IndexedDbReferenceSource` remain available for tests and development. User-owned IndexedDB tables remain separate and survive production reference updates. A seed alias can resolve a prior development ID to one exact production match without rewriting user-owned notebook, favorite, study or SRS rows.
 
-Schema version 3 adds the search-index table without changing existing keys. The migration walks v2 dictionary entries using a cursor and writes one index record per entry in batches within the version-change transaction. Schema v2's normalized meaning helpers and all user-owned tables remain intact. Migration tests start with a v2 fixture and verify notebooks, study state, SRS cards, review logs, search history, and settings survive.
+## Online fallback and hosting
 
-During dataset import, each validated dictionary chunk writes normalized dictionary entries, corresponding search-index records, and its completed-chunk marker in one transaction. Replaying an incomplete import is idempotent by the compound index key. The active dataset pointer changes only after all collections complete, so search ignores staged index rows. On activation, old dictionary and search-index rows are removed in bounded 500-row batches. Development reference-data clearing also clears the index.
+Online lookup remains a separate, explicit fallback after local static and custom-word search. It never silently changes the canonical offline corpus. Static asset URLs use Vite `BASE_URL`, including `/JapanLearnAppWeb/` for the GitHub Pages project path.
 
-## Routes and phase boundary
-
-`/dictionary?q=...` restores a query; `/dictionary/:id` is a stable detail route. Search history remains local and appears on Home. This phase does not add notebook actions, kanji/grammar links, SRS actions, review workflows, or dataset download/update UI.
+The measured production search profile, HTTP request counts, cache behavior and known request fan-out limits are documented in [DATA_DELIVERY.md](DATA_DELIVERY.md). No full dictionary preload or aggressive search-shard prefetch is used.

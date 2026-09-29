@@ -1,60 +1,50 @@
-import { ArrowRight, BookOpen, Flame, RotateCcw, Sparkles } from 'lucide-react'
+import { ArrowRight, BookOpen, RotateCcw, Sparkles } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
-import { SearchHistoryRepository } from '../../db/repositories/user-data'
-import type { SearchHistory } from '../../types/domain'
+import { SearchHistoryRepository, SrsRepository, StudyRepository } from '../../db/repositories/user-data'
+import { referenceDataSource } from '../../db/sources/reference-source'
+import { ensureLocalDatasetReady } from '../../db/initialization'
+import { getAllLevelsProgress } from '../jlpt/progress-model'
+import { preferredMeaning } from '../../lib/display-meaning'
+import type { DictionaryEntry, SearchHistory } from '../../types/domain'
 import { Badge } from '../../components/ui/badge'
 import { Button } from '../../components/ui/button'
 import { PageHeader } from '../../components/ui/page-header'
 import { Progress } from '../../components/ui/progress'
 import { SectionHeader } from '../../components/ui/section-header'
 import { uiCopy } from '../../app/copy'
+import { ReferenceAttribution } from '../dictionary/ReferenceAttribution'
 
-const jlptProgress = [
-  { level: 'N5', value: 92 }, { level: 'N4', value: 75 }, { level: 'N3', value: 41 }, { level: 'N2', value: 18 }, { level: 'N1', value: 3 },
-]
-
-const vocabulary = [
-  { word: '改善', reading: 'かいぜん', meaning: 'cải thiện', level: 'N3' },
-  { word: '郵便局', reading: 'ゆうびんきょく', meaning: 'bưu điện', level: 'N5' },
-  { word: '影響', reading: 'えいきょう', meaning: 'ảnh hưởng', level: 'N3' },
-  { word: '上昇', reading: 'じょうしょう', meaning: 'tăng lên', level: 'N2' },
-  { word: '対応', reading: 'たいおう', meaning: 'ứng phó', level: 'N3' },
-  { word: '読解', reading: 'どっかい', meaning: 'đọc hiểu', level: 'N3' },
-]
-
-const continueItems = [
-  { title: 'N3 Vocabulary', detail: '72 / 100 words', value: 72, icon: BookOpen, path: '/jlpt' },
-  { title: 'Grammar N3', detail: '31 / 50 patterns', value: 62, icon: Sparkles, path: '/grammar' },
-]
+const jlptLevels = ['N5', 'N4', 'N3', 'N2', 'N1'] as const
 
 function todayLabel() {
   return new Intl.DateTimeFormat('en', { weekday: 'long', month: 'long', day: 'numeric' }).format(new Date()).toUpperCase()
 }
 
 const searchHistoryRepository = new SearchHistoryRepository()
+const srsRepository = new SrsRepository()
+const studyRepository = new StudyRepository()
 
 export function HomePage() {
   const navigate = useNavigate()
+  const [vocabulary, setVocabulary] = useState<DictionaryEntry[]>([])
   const [recentSearches, setRecentSearches] = useState<SearchHistory[]>([])
-  useEffect(() => { void searchHistoryRepository.list(6).then(setRecentSearches).catch(() => setRecentSearches([])) }, [])
+  const [reviewCount, setReviewCount] = useState<number | null>(null)
+  const [jlptProgress, setJlptProgress] = useState<Awaited<ReturnType<typeof getAllLevelsProgress>> | null>(null)
+  useEffect(() => { let live = true; void Promise.all([searchHistoryRepository.list(6), srsRepository.counts(), ensureLocalDatasetReady().then(async () => { const [levels, words] = await Promise.all([getAllLevelsProgress(referenceDataSource, studyRepository), referenceDataSource.dictionary.getByJlptLevel('N5', { limit: 6 })]); return { levels, words: words.items } })]).then(([searches, counts, levels]) => { if (live) { setRecentSearches(searches); setReviewCount(counts.due + counts.learning); setJlptProgress(levels.levels); setVocabulary(levels.words) } }).catch(() => { if (live) { setRecentSearches([]); setJlptProgress(null) } }); return () => { live = false } }, [])
+  const continueItems = [
+    { title: 'N5 Vocabulary', progress: jlptProgress?.get('N5')?.vocabulary, icon: BookOpen, path: '/jlpt/N5/vocabulary' },
+    { title: 'Grammar N5', progress: jlptProgress?.get('N5')?.grammar, icon: Sparkles, path: '/jlpt/N5/grammar' },
+  ].map((item) => ({ ...item, detail: item.progress ? `${item.progress.studied} studied / ${item.progress.available} available` : 'Reference data unavailable', value: item.progress?.available ? Math.round(item.progress.studied * 100 / item.progress.available) : 0 }))
   return <div className="home-page">
     <PageHeader eyebrow={todayLabel()} title="おはようございます" description="今日も少しずつ、日本語に触れていきましょう。" />
 
     <section className="review-callout" aria-labelledby="review-heading">
       <div className="review-callout-icon"><RotateCcw size={19} /></div>
-      <div className="review-callout-copy"><p className="eyebrow">{uiCopy.home.reviewEyebrow}</p><h2 id="review-heading">{uiCopy.home.reviewsDue}</h2><p>{uiCopy.home.reviewDescription}</p></div>
+      <div className="review-callout-copy"><p className="eyebrow">{uiCopy.home.reviewEyebrow}</p><h2 id="review-heading">{reviewCount === null ? 'Review queue' : `${reviewCount} ${reviewCount === 1 ? 'review' : 'reviews'} due`}</h2><p>{reviewCount === 0 ? 'No cards due now. Add words to review or come back later.' : uiCopy.home.reviewDescription}</p></div>
       <Button onClick={() => navigate('/review')} className="review-cta">{uiCopy.home.openReview} <ArrowRight size={16} /></Button>
     </section>
-
-    <div className="summary-strip" aria-label={uiCopy.home.studySummary}>
-      <div className="summary-item"><div className="summary-label"><span>{uiCopy.home.dailyGoal}</span><span className="summary-value">18 <span>/ 30 {uiCopy.home.words}</span></span></div><Progress value={60} label={`${uiCopy.home.dailyGoal} 18 of 30 ${uiCopy.home.words}`} /></div>
-      <div className="summary-separator" />
-      <div className="summary-stat"><span className="summary-stat-icon goal-icon"><BookOpen size={17} /></span><span><small>{uiCopy.home.studiedToday}</small><strong>18 <em>{uiCopy.home.words}</em></strong></span></div>
-      <div className="summary-separator" />
-      <div className="summary-stat"><span className="summary-stat-icon streak-icon"><Flame size={17} /></span><span><small>{uiCopy.home.studyStreak}</small><strong>12 <em>{uiCopy.home.days}</em></strong></span></div>
-    </div>
 
     <div className="home-grid">
       <div className="home-main-column">
@@ -71,21 +61,25 @@ export function HomePage() {
         </section>
 
         <section className="home-section vocabulary-section">
-          <SectionHeader title={uiCopy.home.todaysVocabulary} eyebrow={uiCopy.home.vocabularyEyebrow} action={<Link to="/dictionary" className="section-action">{uiCopy.home.openDictionary} <ArrowRight size={14} /></Link>} />
-          <div className="vocabulary-table" role="list" aria-label={uiCopy.home.todaysVocabulary}>
-            {vocabulary.map((item) => <Link to="/dictionary" className="vocabulary-row" role="listitem" key={item.word}>
-              <span className="vocab-word">{item.word}</span><span className="vocab-reading">{item.reading}</span><span className="vocab-meaning">{item.meaning}</span><Badge>{item.level}</Badge>
+          <SectionHeader title="Explore N5 vocabulary" eyebrow={uiCopy.home.vocabularyEyebrow} action={<Link to="/dictionary" className="section-action">{uiCopy.home.openDictionary} <ArrowRight size={14} /></Link>} />
+          <div className="vocabulary-table" role="list" aria-label="N5 reference vocabulary">
+            {!vocabulary.length && <p className="content-subtle">Reference vocabulary will appear when data is available.</p>}
+            {vocabulary.map((item) => <Link to={`/dictionary/${encodeURIComponent(item.id)}`} className="vocabulary-row" role="listitem" key={item.id}>
+              <span className="vocab-word">{item.word}</span><span className="vocab-reading">{item.reading}</span><span className="vocab-meaning">{preferredMeaning(item.meanings) ?? 'Meaning unavailable'}</span>{item.jlptLevel && <Badge>{item.jlptLevel}</Badge>}
             </Link>)}
           </div>
         </section>
+        <ReferenceAttribution />
       </div>
 
       <aside className="home-side-column">
         <section className="home-section jlpt-section">
           <SectionHeader title={uiCopy.home.jlptProgress} eyebrow={uiCopy.home.jlptEyebrow} action={<Link to="/jlpt" className="text-icon-link" aria-label={uiCopy.home.viewJlpt}><ArrowRight size={16} /></Link>} />
           <div className="jlpt-list">
-            {jlptProgress.map(({ level, value }) => <div className="jlpt-row" key={level}><Badge tone={level === 'N3' ? 'primary' : 'neutral'}>{level}</Badge><Progress value={value} label={`${level} progress ${value}%`} /><span className="jlpt-percent">{value}%</span></div>)}
+            {jlptLevels.map((level) => { const progress = jlptProgress?.get(level)?.vocabulary; const value = progress?.available ? progress.studied * 100 / progress.available : 0; return <div className="jlpt-row" key={level}><Badge>{level}</Badge><Progress value={value} label={`${level} dataset progress: ${progress?.studied ?? 0} of ${progress?.available ?? 0} available vocabulary records studied`} /><span className="jlpt-percent">{jlptProgress ? `${progress?.studied ?? 0}/${progress?.available ?? 0}` : '—'}</span></div>})}
           </div>
+          <p className="home-jlpt-note">Dataset progress only; not full JLPT syllabus completion.</p>
+          <Link to="/progress" className="section-action">View learning progress <ArrowRight size={14} /></Link>
         </section>
 
         <section className="home-section recent-section">

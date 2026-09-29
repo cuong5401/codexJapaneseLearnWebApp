@@ -1,0 +1,151 @@
+{
+  "schemaVersion": 1,
+  "openjlptRevision": "c42fd9fa3777bfc1775446f7c418d549dfd6e4cf",
+  "fetchedAt": "2026-09-28T23:39:33.821Z",
+  "files": [
+    {
+      "path": "openjlpt/LICENSE",
+      "url": "https://raw.githubusercontent.com/evanclan/OpenJLPT/c42fd9fa3777bfc1775446f7c418d549dfd6e4cf/LICENSE",
+      "sha256": "28a9529c7d0bb4dc51f4bf5c116a3d16ef247a052f7591466768ddf563fd1cf5",
+      "bytes": 20138,
+      "fetchedAt": "2026-09-28T23:39:33.821Z",
+      "lastModified": null
+    },
+    {
+      "path": "openjlpt/NOTICE.md",
+      "url": "https://raw.githubusercontent.com/evanclan/OpenJLPT/c42fd9fa3777bfc1775446f7c418d549dfd6e4cf/NOTICE.md",
+      "sha256": "f33440f1aa08f655b00243d25273333b3cb444e676f53a186f57956fddf95a70",
+      "bytes": 2416,
+      "fetchedAt": "2026-09-28T23:39:33.821Z",
+      "lastModified": null
+    },
+    {
+      "path": "openjlpt/vocab/n5.json",
+      "url": "https://raw.githubusercontent.com/evanclan/OpenJLPT/c42fd9fa3777bfc1775446f7c418d549dfd6e4cf/data/json/vocab/n5.json",
+      "sha256": "3e606fc15fd5d177fa7c3928c17f28b0d34ac84ec6bdbfe0947b339d9d815a6d",
+      "bytes": 222308,
+      "fetchedAt": "2026-09-28T23:39:33.821Z",
+      "lastModified": null
+    },
+    {
+      "path": "openjlpt/vocab/n4.json",
+      "url": "https://raw.githubusercontent.com/evanclan/OpenJLPT/c42fd9fa3777bfc1775446f7c418d549dfd6e4cf/data/json/vocab/n4.json",
+      "sha256": "978b9813afaac181fe1308eb1ad7d4cb4ad4ffc9178fa88fc7fb2832de5dbb62",
+      "bytes": 218895,
+      "fetchedAt": "2026-09-28T23:39:33.821Z",
+      "lastModified": null
+    },
+    {
+      "path": "openjlpt/vocab/n3.json",
+      "url": "https://raw.githubusercontent.com/evanclan/OpenJLPT/c42fd9fa3777bfc1775446f7c418d549dfd6e4cf/data/json/vocab/n3.json",
+      "sha256": "d8ce3998ebb254567436ef3d34c96f6aac83c2c88dbfb85af5e5935bd1bd21ed",
+      "bytes": 679580,
+      "fetchedAt": "2026-09-28T23:39:33.821Z",
+      "lastModified": null
+    },
+    {
+      "path": "openjlpt/vocab/n2.json",
+      "url": "https://raw.githubusercontent.com/evanclan/OpenJLPT/c42fd9fa3777bfc1775446f7c418d549dfd6e4cf/data/json/vocab/n2.json",
+      "sha256": "12094a0f89a8f4a77f7d230aa280900c60c149f60dba2a810589f60407d3190f",
+      "bytes": 680482,
+      "fetchedAt": "2026-09-28T23:39:33.821Z",
+      "lastModified": null
+    },
+    {
+      "path": "openjlpt/vocab/n1.json",
+      "url": "https://raw.githubusercontent.com/evanclan/OpenJLPT/c42fd9fa3777bfc1775446f7c418d549dfd6e4cf/data/json/vocab/n1.json",
+      "sha256": "e9662df1dba34c2f566a128f203c8a78296c1c2c1a337b8ef036ca516ea8430e",
+      "bytes": 1311444,
+      "fetchedAt": "2026-09-28T23:39:33.821Z",
+      "lastModified": null
+    },
+    {
+      "path": "openjlpt/kanji/n5.json",
+      "url": "https://raw.githubusercontent.com/evanclan/OpenJLPT/c42fd9fa3777bfc1775446f7c418d549dfd6e4cf/data/json/kanji/n5.json",
+      "sha256": "bea3728c11ea2a198b28aca1860acf37eae00a33189f7cab366027eca80cccca",
+      "bytes": 22701,
+      "fetchedAt": "2026-09-28T23:39:33.821Z",
+      "lastModified": null
+    },
+    {
+      "path": "openjlpt/kanji/n4.json",
+      "url": "https://raw.githubusercontent.com/evanclan/OpenJLPT/c42fd9fa3777bfc1775446f7c418d549dfd6e4cf/data/json/kanji/n4.json",
+      "sha256": "5d26112e42a99d3d97ba614f3ef7f71605de237a95a6af4f96e5d444c8ac47eb",
+      "bytes": 49031,
+      "fetchedAt": "2026-09-28T23:39:33.821Z",
+      "lastModified": null
+    },
+    {
+      "path": "openjlpt/kanji/n3.json",
+      "url": "https://raw.githubusercontent.com/evanclan/OpenJLPT/c42fd9fa3777bfc1775446f7c418d549dfd6e4cf/data/json/kanji/n3.json",
+      "sha256": "99e632d1d8972dadc2bd2d4c2dee37366b4d32d0173f17b1aa182351adc91273",
+      "bytes": 117134,
+      "fetchedAt": "2026-09-28T23:39:33.821Z",
+      "lastModified": null
+    },
+    {
+      "path": "openjlpt/kanji/n2.json",
+      "url": "https://raw.githubusercontent.com/evanclan/OpenJLPT/c42fd9fa3777bfc1775446f7c418d549dfd6e4cf/data/json/kanji/n2.json",
+      "sha256": "62cc69b2259811e68a53576ac1efc43fc658af5536232d9985a733251292178b",
+      "bytes": 105985,
+      "fetchedAt": "2026-09-28T23:39:33.821Z",
+      "lastModified": null
+    },
+    {
+      "path": "openjlpt/kanji/n1.json",
+      "url": "https://raw.githubusercontent.com/evanclan/OpenJLPT/c42fd9fa3777bfc1775446f7c418d549dfd6e4cf/data/json/kanji/n1.json",
+      "sha256": "75bbb2e45d3cfb7e8a1de42cd36c4a70af0ebf31ec4589503434ac3dd7522db6",
+      "bytes": 343931,
+      "fetchedAt": "2026-09-28T23:39:33.821Z",
+      "lastModified": null
+    },
+    {
+      "path": "openjlpt/grammar/n5.json",
+      "url": "https://raw.githubusercontent.com/evanclan/OpenJLPT/c42fd9fa3777bfc1775446f7c418d549dfd6e4cf/data/json/grammar/n5.json",
+      "sha256": "f82cb9883e5634dae96775bdaf6aa881fec1c00e85a3f8c1874159e25ae09fd3",
+      "bytes": 9116,
+      "fetchedAt": "2026-09-28T23:39:33.821Z",
+      "lastModified": null
+    },
+    {
+      "path": "openjlpt/grammar/n4.json",
+      "url": "https://raw.githubusercontent.com/evanclan/OpenJLPT/c42fd9fa3777bfc1775446f7c418d549dfd6e4cf/data/json/grammar/n4.json",
+      "sha256": "9d54afff0315f72069e4d1e31e0b77d2508b6c67204bf4a8da6fdc1aaf0ed01a",
+      "bytes": 9622,
+      "fetchedAt": "2026-09-28T23:39:33.821Z",
+      "lastModified": null
+    },
+    {
+      "path": "openjlpt/grammar/n3.json",
+      "url": "https://raw.githubusercontent.com/evanclan/OpenJLPT/c42fd9fa3777bfc1775446f7c418d549dfd6e4cf/data/json/grammar/n3.json",
+      "sha256": "22090a0af74e627f2dfeed03b0eea1adaeea1aa1417d62f1ecefd47a7fcdc4ea",
+      "bytes": 10133,
+      "fetchedAt": "2026-09-28T23:39:33.821Z",
+      "lastModified": null
+    },
+    {
+      "path": "openjlpt/grammar/n2.json",
+      "url": "https://raw.githubusercontent.com/evanclan/OpenJLPT/c42fd9fa3777bfc1775446f7c418d549dfd6e4cf/data/json/grammar/n2.json",
+      "sha256": "6ec87ae58551e2b78427b2251c9d4b998e136e780a1a8a2ab1e676c33d77cf91",
+      "bytes": 10309,
+      "fetchedAt": "2026-09-28T23:39:33.821Z",
+      "lastModified": null
+    },
+    {
+      "path": "openjlpt/grammar/n1.json",
+      "url": "https://raw.githubusercontent.com/evanclan/OpenJLPT/c42fd9fa3777bfc1775446f7c418d549dfd6e4cf/data/json/grammar/n1.json",
+      "sha256": "9171baa5bf61901858714f973c0aad8214d937ff6a05cab87a03e89211d32d93",
+      "bytes": 10466,
+      "fetchedAt": "2026-09-28T23:39:33.821Z",
+      "lastModified": null
+    },
+    {
+      "path": "JMdict_e.gz",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_e.gz",
+      "sha256": "07c9aa6d4c8b477096ca5c2a02f960b1e354b6d8f27626b478c54e8c95d3753a",
+      "bytes": 10579067,
+      "fetchedAt": "2026-09-28T23:39:33.821Z",
+      "lastModified": "Mon, 28 Sep 2026 03:30:26 GMT"
+    }
+  ]
+}

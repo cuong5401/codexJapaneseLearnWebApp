@@ -8,10 +8,15 @@ import { IconButton } from '../../components/ui/icon-button'
 import { uiCopy } from '../copy'
 
 const studyIds = ['kanji', 'grammar', 'jlpt'] as const
-const moreIds = ['reading', 'notebook', 'progress', 'settings'] as const
+const moreIds = ['myVocabulary', 'reading', 'notebook', 'progress', 'settings'] as const
 
 function getCurrentTitle(pathname: string) {
   if (pathname.startsWith('/dictionary/')) return uiCopy.navigation.dictionary
+  if (pathname.startsWith('/review/')) return uiCopy.navigation.review
+  if (pathname.startsWith('/reading/')) return uiCopy.navigation.reading
+  if (pathname.startsWith('/my-vocabulary')) return uiCopy.navigation.myVocabulary
+  if (pathname.startsWith('/jlpt/')) return uiCopy.navigation.jlpt
+  if (pathname.startsWith('/notebook/')) return uiCopy.navigation.notebook
   const item = [...mainNavigation, settingsNavigation].find((nav) => nav.path === pathname)
   if (item) return item.label
   return uiCopy.navigation.home
@@ -62,8 +67,8 @@ function MobileSheet({ kind, open, onOpenChange }: { kind: 'study' | 'more'; ope
 function MobileNavigation() {
   const { pathname } = useLocation()
   const [sheet, setSheet] = useState<'study' | 'more' | null>(null)
-  const activeStudy = studyIds.some((id) => `/${id}` === pathname)
-  const activeMore = moreIds.some((id) => `/${id}` === pathname)
+  const activeStudy = studyIds.some((id) => pathname === `/${id}` || (id === 'jlpt' && pathname.startsWith('/jlpt/')))
+  const activeMore = moreIds.some((id) => mainNavigation.find((item) => item.id === id)?.path === pathname || (id === 'myVocabulary' && pathname.startsWith('/my-vocabulary')) || (id === 'notebook' && pathname.startsWith('/notebook')))
   return <>
     <nav className="mobile-nav" aria-label={uiCopy.accessibility.primaryNavigation}>
       <NavLink to="/" end className={({ isActive }) => `mobile-nav-item${isActive ? ' is-active' : ''}`}><span className="mobile-nav-icon"><House size={20} /></span><span>{uiCopy.shell.mobileNavigation.home}</span></NavLink>
